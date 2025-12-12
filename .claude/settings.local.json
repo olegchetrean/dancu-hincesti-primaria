@@ -12,7 +12,8 @@
       "Bash(grep:*)",
       "Bash(find:*)",
       "Bash(cat:*)",
-      "Bash(git commit -m \"$(cat <<''EOF''\nCurățare completă: eliminare TOATE referințele Pociumbăuți\n\nActualizări suplimentare:\n- Admin PHP backend: toate fișierele actualizate pentru Dancu\n- Database schema: actualizat pentru primaria_dancu\n- types.ts: distances.riscani → distances.hincesti\n- constants.ts: distanțe corecte pentru Dancu\n- Geography.tsx: folosește noile chei (hincesti, leuseni)\n- uploads/.htaccess: actualizat\n\nParola admin: Dancu2024! (era Pociumbauti2024!)\nDB name: primaria_dancu (era primaria_pociumbauti)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n)\")"
+      "Bash(git commit -m \"$(cat <<''EOF''\nCurățare completă: eliminare TOATE referințele Pociumbăuți\n\nActualizări suplimentare:\n- Admin PHP backend: toate fișierele actualizate pentru Dancu\n- Database schema: actualizat pentru primaria_dancu\n- types.ts: distances.riscani → distances.hincesti\n- constants.ts: distanțe corecte pentru Dancu\n- Geography.tsx: folosește noile chei (hincesti, leuseni)\n- uploads/.htaccess: actualizat\n\nParola admin: Dancu2024! (era Pociumbauti2024!)\nDB name: primaria_dancu (era primaria_pociumbauti)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git commit:*)"
     ]
   }
 }
