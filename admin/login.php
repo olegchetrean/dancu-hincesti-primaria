@@ -1,6 +1,6 @@
 <?php
 /**
- * Pagina de Autentificare - Primăria Pociumbăuți
+ * Pagina de Autentificare - Primăria Dancu
  *
  * Securitate: CSRF, Rate Limiting, bcrypt, Session Regeneration
  */
@@ -126,7 +126,7 @@ $csrf_token = generate_csrf_token();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Autentificare - Primăria Pociumbăuți</title>
+    <title>Autentificare - Primăria Dancu</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -423,7 +423,7 @@ $csrf_token = generate_csrf_token();
         <div class="login-form-side">
             <div class="logo-section">
                 <div class="logo-icon">P</div>
-                <h1>Primăria Pociumbăuți</h1>
+                <h1>Primăria Dancu</h1>
                 <p>Panou de Administrare</p>
             </div>
 
@@ -513,7 +513,7 @@ $csrf_token = generate_csrf_token();
         <div class="login-brand-side">
             <div class="brand-content">
                 <h2>Bine ați revenit!</h2>
-                <p>Gestionați cu încredere informațiile comunei Pociumbăuți</p>
+                <p>Gestionați cu încredere informațiile comunei Dancu</p>
             </div>
         </div>
     </div>

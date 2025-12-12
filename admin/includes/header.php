@@ -1,6 +1,6 @@
 <?php
 /**
- * Header Admin - Primăria Pociumbăuți
+ * Header Admin - Primăria Dancu
  */
 
 // Previne accesul direct
@@ -14,7 +14,7 @@ if (!defined('ADMIN_ACCESS')) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title><?php echo e($page_title ?? 'Admin'); ?> - Primăria Pociumbăuți</title>
+    <title><?php echo e($page_title ?? 'Admin'); ?> - Primăria Dancu</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +37,7 @@ if (!defined('ADMIN_ACCESS')) {
                 <div class="logo-icon">P</div>
                 <div class="logo-text">
                     <span class="logo-title">Primăria</span>
-                    <span class="logo-subtitle">Pociumbăuți</span>
+                    <span class="logo-subtitle">Dancu</span>
                 </div>
             </div>
             <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">

@@ -1,6 +1,6 @@
 <?php
 /**
- * Lista Dispoziții - Primăria Pociumbăuți
+ * Lista Dispoziții - Primăria Dancu
  */
 
 define('ADMIN_ACCESS', true);

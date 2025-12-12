@@ -1,6 +1,6 @@
 <?php
 /**
- * Funcții Helper - Primăria Pociumbăuți Admin
+ * Funcții Helper - Primăria Dancu Admin
  *
  * Funcții reutilizabile pentru întreaga aplicație
  */

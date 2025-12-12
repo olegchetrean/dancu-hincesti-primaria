@@ -81,15 +81,15 @@ export const Geography: React.FC<Props> = ({ highContrast }) => {
                 </li>
                 <li className="flex justify-between">
                   <span>Hîncești (centru raional):</span>
-                  <strong>{CONTACT_INFO.distances?.riscani}</strong>
+                  <strong>{CONTACT_INFO.distances?.hincesti}</strong>
                 </li>
                 <li className="flex justify-between">
                   <span>PTF Leușeni-Albița:</span>
-                  <strong>8 km (10 min)</strong>
+                  <strong>{CONTACT_INFO.distances?.leuseni}</strong>
                 </li>
                 <li className="flex justify-between">
                   <span>Frontiera România:</span>
-                  <strong>8 km</strong>
+                  <strong>{CONTACT_INFO.distances?.frontieraRomania}</strong>
                 </li>
               </ul>
             </div>

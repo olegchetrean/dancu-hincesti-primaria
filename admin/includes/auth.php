@@ -1,6 +1,6 @@
 <?php
 /**
- * Sistem de Autentificare - Primăria Pociumbăuți
+ * Sistem de Autentificare - Primăria Dancu
  *
  * Verificări de securitate și gestionare sesiuni
  */

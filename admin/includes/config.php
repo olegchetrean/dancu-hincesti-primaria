@@ -1,6 +1,6 @@
 <?php
 /**
- * Configurare Bază de Date - Primăria Pociumbăuți
+ * Configurare Bază de Date - Primăria Dancu
  *
  * IMPORTANT: În producție, mutați acest fișier în afara directorului web
  * și actualizați credențialele din variabilele de mediu!
@@ -28,7 +28,7 @@ ini_set('session.gc_maxlifetime', 1800); // 30 minute
 // ÎN PRODUCȚIE: Folosiți variabile de mediu!
 $db_config = [
     'host' => getenv('DB_HOST') ?: 'localhost',
-    'dbname' => getenv('DB_NAME') ?: 'primaria_pociumbauti',
+    'dbname' => getenv('DB_NAME') ?: 'primaria_dancu',
     'username' => getenv('DB_USER') ?: 'primaria_admin',
     'password' => getenv('DB_PASS') ?: '', // SETAȚI PAROLA!
     'charset' => 'utf8mb4',
@@ -59,9 +59,9 @@ try {
 }
 
 // Constante aplicație
-define('SITE_NAME', 'Primăria Pociumbăuți');
-define('SITE_EMAIL', 'primaria.pociumbauti@gov.md');
-define('SITE_URL', 'https://pociumbauti.md');
+define('SITE_NAME', 'Primăria Dancu');
+define('SITE_EMAIL', 'primaria.dancu@gov.md');
+define('SITE_URL', 'https://dancu.md');
 define('ADMIN_URL', SITE_URL . '/admin');
 
 // Configurare upload fișiere

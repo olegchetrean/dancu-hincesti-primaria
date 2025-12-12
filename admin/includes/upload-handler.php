@@ -1,6 +1,6 @@
 <?php
 /**
- * Handler Upload Securizat - Primăria Pociumbăuți
+ * Handler Upload Securizat - Primăria Dancu
  *
  * Validare și procesare sigură a fișierelor încărcate
  * Protecție împotriva: file inclusion, malware upload, path traversal

@@ -1,6 +1,6 @@
 <?php
 /**
- * Protecție CSRF - Primăria Pociumbăuți
+ * Protecție CSRF - Primăria Dancu
  *
  * Generare și validare token-uri CSRF pentru toate formularele
  */

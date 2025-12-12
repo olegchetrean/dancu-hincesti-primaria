@@ -1,6 +1,6 @@
 <?php
 /**
- * Logout - Primăria Pociumbăuți
+ * Logout - Primăria Dancu
  */
 
 define('ADMIN_ACCESS', true);

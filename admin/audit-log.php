@@ -1,6 +1,6 @@
 <?php
 /**
- * Jurnal de Audit - Primăria Pociumbăuți
+ * Jurnal de Audit - Primăria Dancu
  * Doar pentru administratori
  */
 

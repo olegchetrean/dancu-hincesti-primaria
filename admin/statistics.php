@@ -1,6 +1,6 @@
 <?php
 /**
- * Statistici - Primăria Pociumbăuți
+ * Statistici - Primăria Dancu
  */
 
 define('ADMIN_ACCESS', true);

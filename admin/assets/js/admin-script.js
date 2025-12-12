@@ -1,5 +1,5 @@
 /**
- * Admin Panel JavaScript - Primăria Pociumbăuți
+ * Admin Panel JavaScript - Primăria Dancu
  */
 
 document.addEventListener('DOMContentLoaded', function() {

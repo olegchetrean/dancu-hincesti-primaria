@@ -1,6 +1,6 @@
 <?php
 /**
- * Încărcare Fotografii - Primăria Pociumbăuți
+ * Încărcare Fotografii - Primăria Dancu
  */
 
 define('ADMIN_ACCESS', true);

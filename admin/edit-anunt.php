@@ -1,6 +1,6 @@
 <?php
 /**
- * Editare Anunț - Primăria Pociumbăuți
+ * Editare Anunț - Primăria Dancu
  */
 
 define('ADMIN_ACCESS', true);

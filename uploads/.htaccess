@@ -1,5 +1,5 @@
 # Securitate pentru directorul de uploads
-# Primăria Pociumbăuți
+# Primăria Dancu
 
 # Dezactivăm executarea scripturilor PHP
 <FilesMatch "\.php$">

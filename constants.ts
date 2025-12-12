@@ -21,9 +21,9 @@ export const CONTACT_INFO: ContactInfo = {
   emergencyPhone: "112",
   distances: {
     chisinau: "76-90 km (1.5-2 ore)",
-    riscani: "43-55 km (1 oră)", // Actually Hîncești
-    balti: "N/A",
-    frontieraUcraina: "N/A"
+    hincesti: "43-55 km (1 oră)",
+    leuseni: "8 km (10 min)",
+    frontieraRomania: "8 km"
   }
 };
 

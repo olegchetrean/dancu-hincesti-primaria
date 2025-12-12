@@ -1,6 +1,6 @@
 <?php
 /**
- * Setări Cont - Primăria Pociumbăuți
+ * Setări Cont - Primăria Dancu
  */
 
 define('ADMIN_ACCESS', true);

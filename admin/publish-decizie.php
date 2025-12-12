@@ -1,6 +1,6 @@
 <?php
 /**
- * Publicare Decizie Consiliu Local - Primăria Pociumbăuți
+ * Publicare Decizie Consiliu Local - Primăria Dancu
  */
 
 define('ADMIN_ACCESS', true);

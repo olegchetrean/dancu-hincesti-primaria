@@ -1,4 +1,4 @@
-# Ghid de Instalare - Admin Panel Primăria Pociumbăuți
+# Ghid de Instalare - Admin Panel Primăria Dancu
 
 ## Cerințe de Sistem
 
@@ -13,12 +13,12 @@
 
 1. Creați o bază de date MySQL:
 ```sql
-CREATE DATABASE primaria_pociumbeni CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE primaria_dancu CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
 2. Importați schema din `database/schema.sql`:
 ```bash
-mysql -u root -p primaria_pociumbeni < database/schema.sql
+mysql -u root -p primaria_dancu < database/schema.sql
 ```
 
 ### 2. Configurare Conexiune
@@ -28,7 +28,7 @@ Editați fișierul `admin/includes/config.php` și actualizați datele de conexi
 ```php
 $db_config = [
     'host' => 'localhost',
-    'dbname' => 'primaria_pociumbeni',  // Numele bazei de date
+    'dbname' => 'primaria_dancu',  // Numele bazei de date
     'username' => 'root',                // Utilizator MySQL
     'password' => '',                    // Parola MySQL
     'charset' => 'utf8mb4'
@@ -120,7 +120,7 @@ CALL cleanup_old_statistics();
 
 Backup baza de date zilnic:
 ```bash
-mysqldump -u root -p primaria_pociumbeni > backup_$(date +%Y%m%d).sql
+mysqldump -u root -p primaria_dancu > backup_$(date +%Y%m%d).sql
 ```
 
 ## Contact

@@ -1,13 +1,13 @@
 -- ═══════════════════════════════════════════════════════════════════════════════
---                 PRIMĂRIA POCIUMBĂUȚI - SCHEMA BAZĂ DE DATE
+--                 PRIMĂRIA DANCU - SCHEMA BAZĂ DE DATE
 --                         Versiune: 1.0 | Data: 2024-12-12
 -- ═══════════════════════════════════════════════════════════════════════════════
 --
 -- INSTRUCȚIUNI INSTALARE:
--- 1. Creați baza de date: CREATE DATABASE primaria_pociumbauti CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- 1. Creați baza de date: CREATE DATABASE primaria_dancu CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 -- 2. Creați utilizatorul: CREATE USER 'primaria_admin'@'localhost' IDENTIFIED BY 'PAROLA_SIGURA_AICI';
--- 3. Acordați permisiuni: GRANT ALL PRIVILEGES ON primaria_pociumbauti.* TO 'primaria_admin'@'localhost';
--- 4. Rulați acest script: mysql -u primaria_admin -p primaria_pociumbauti < schema.sql
+-- 3. Acordați permisiuni: GRANT ALL PRIVILEGES ON primaria_dancu.* TO 'primaria_admin'@'localhost';
+-- 4. Rulați acest script: mysql -u primaria_admin -p primaria_dancu < schema.sql
 --
 -- ═══════════════════════════════════════════════════════════════════════════════
 
@@ -262,18 +262,18 @@ COMMENT='Statistici vizitatori per pagină';
 -- ═══════════════════════════════════════════════════════════════════════════════
 
 -- Utilizatori inițiali (SCHIMBAȚI PAROLELE ÎN PRODUCȚIE!)
--- Parola pentru ambii: "Pociumbauti2024!" (hash bcrypt cost 12)
+-- Parola pentru ambii: "Dancu2024!" (hash bcrypt cost 12)
 INSERT INTO `users` (`username`, `password_hash`, `full_name`, `role`, `email`) VALUES
-('admin', '$2y$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/X4.12Cy4LnzHRt3S2', 'Administrator', 'admin', 'admin@pociumbauti.md'),
-('irina', '$2y$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/X4.12Cy4LnzHRt3S2', 'Irina - Secretar', 'editor', 'irina@pociumbauti.md');
+('admin', '$2y$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/X4.12Cy4LnzHRt3S2', 'Administrator', 'admin', 'admin@dancu.md'),
+('irina', '$2y$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/X4.12Cy4LnzHRt3S2', 'Irina - Secretar', 'editor', 'irina@dancu.md');
 
 -- Setări implicite
 INSERT INTO `setari` (`cheie`, `valoare`, `descriere`, `grup`, `tip`) VALUES
-('site_name', 'Primăria Comunei Pociumbăuți', 'Numele site-ului', 'general', 'text'),
-('site_email', 'primaria.pociumbauti@gov.md', 'Email principal contact', 'contact', 'email'),
+('site_name', 'Primăria Comunei Dancu', 'Numele site-ului', 'general', 'text'),
+('site_email', 'primaria.dancu@gov.md', 'Email principal contact', 'contact', 'email'),
 ('site_phone_mayor', '+373 256 73421', 'Telefon primar', 'contact', 'text'),
 ('site_phone_secretary', '+373 256 73196', 'Telefon secretar', 'contact', 'text'),
-('site_address', 'MD-5632, Pociumbăuți, Raionul Rîșcani, Republica Moldova', 'Adresa poștală', 'contact', 'textarea'),
+('site_address', 'MD-3424, Dancu, Raionul Hîncești, Republica Moldova', 'Adresa poștală', 'contact', 'textarea'),
 ('program_lv', 'Luni-Vineri: 08:00-17:00 (Pauză 12:00-13:00)', 'Program săptămânal', 'contact', 'text'),
 ('program_audiente', 'Marți, Joi: 14:00-16:00', 'Program audiențe', 'contact', 'text'),
 ('max_upload_size', '10485760', 'Mărime max fișier în bytes (10MB)', 'upload', 'number'),
@@ -285,8 +285,8 @@ INSERT INTO `setari` (`cheie`, `valoare`, `descriere`, `grup`, `tip`) VALUES
 -- Anunț de test
 INSERT INTO `anunturi` (`titlu`, `categorie`, `data_publicare`, `continut`, `continut_scurt`, `prioritate`, `vizibil`, `created_by`) VALUES
 ('Bine ați venit pe noul site!', 'general', CURDATE(),
-'<p>Primăria comunei Pociumbăuți vă urează bun venit pe noul site oficial, dezvoltat conform cerințelor <strong>HG 728/2023</strong>.</p><p>Aici veți găsi toate informațiile despre activitatea administrației locale, deciziile consiliului, dispozițiile primarului și anunțurile importante.</p>',
-'Bine ați venit pe noul site oficial al Primăriei Pociumbăuți, dezvoltat conform HG 728/2023.',
+'<p>Primăria comunei Dancu vă urează bun venit pe noul site oficial, dezvoltat conform cerințelor <strong>HG 728/2023</strong>.</p><p>Aici veți găsi toate informațiile despre activitatea administrației locale, deciziile consiliului, dispozițiile primarului și anunțurile importante.</p>',
+'Bine ați venit pe noul site oficial al Primăriei Dancu, dezvoltat conform HG 728/2023.',
 1, 1, 1);
 
 SET FOREIGN_KEY_CHECKS = 1;

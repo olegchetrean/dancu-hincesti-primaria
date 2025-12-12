@@ -108,9 +108,9 @@ export interface ContactInfo {
   emergencyPhone?: string;
   distances?: {
     chisinau: string;
-    riscani: string;
-    balti: string;
-    frontieraUcraina: string;
+    hincesti: string;
+    leuseni: string;
+    frontieraRomania: string;
   };
 }
 

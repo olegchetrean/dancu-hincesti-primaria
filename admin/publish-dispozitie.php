@@ -1,6 +1,6 @@
 <?php
 /**
- * Publicare Dispoziție Primar - Primăria Pociumbăuți
+ * Publicare Dispoziție Primar - Primăria Dancu
  */
 
 define('ADMIN_ACCESS', true);

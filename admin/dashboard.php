@@ -1,6 +1,6 @@
 <?php
 /**
- * Dashboard Principal - Primăria Pociumbăuți
+ * Dashboard Principal - Primăria Dancu
  */
 
 define('ADMIN_ACCESS', true);
