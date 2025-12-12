@@ -132,7 +132,7 @@ export const Admin: React.FC<Props> = ({ highContrast, setView }) => {
                <div className="flex justify-center mb-4">
                  <Shield className={`w-16 h-16 ${highContrast ? 'text-yellow-400' : 'text-moldova-blue'}`} />
                </div>
-               <h1 className="text-3xl font-bold tracking-tight">Primăria Pociumbăuți</h1>
+               <h1 className="text-3xl font-bold tracking-tight">Primăria Dancu</h1>
                <p className="mt-2 text-sm text-gray-500 font-mono">PANOU DE ADMINISTRARE SECURIZAT</p>
              </div>
 
@@ -220,13 +220,13 @@ export const Admin: React.FC<Props> = ({ highContrast, setView }) => {
         <div className="hidden lg:block lg:w-[60%] relative overflow-hidden bg-blue-900">
            <img 
              src="https://picsum.photos/1920/1080?random=admin" 
-             alt="Pociumbăuți Peisaj" 
+             alt="Dancu Peisaj" 
              className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay"
            />
            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-purple-900/80 flex flex-col justify-center px-16 text-white">
               <h2 className="text-5xl font-bold mb-6">Bine ați revenit!</h2>
               <p className="text-xl max-w-lg leading-relaxed text-blue-100">
-                Gestionați cu încredere și siguranță informațiile pentru cei 593 de locuitori ai comunei Pociumbăuți.
+                Gestionați cu încredere și siguranță informațiile pentru cei 1,206 de locuitori ai satului Dancu.
               </p>
               <div className="mt-12 flex items-center gap-4 text-sm font-mono opacity-60">
                 <Shield size={16} /> CONEXIUNE SECURIZATĂ TLS 1.3
@@ -249,7 +249,7 @@ export const Admin: React.FC<Props> = ({ highContrast, setView }) => {
                <Shield size={20} />
              </div>
              <div>
-               <h1 className="font-bold leading-tight">Admin Pociumbăuți</h1>
+               <h1 className="font-bold leading-tight">Admin Dancu</h1>
                <p className="text-[10px] opacity-60 font-mono uppercase tracking-wider">Mod Administrator</p>
              </div>
            </div>

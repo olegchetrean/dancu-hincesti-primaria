@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { HISTORY_EVENTS, OFFICIAL_SYMBOLS } from '../constants';
-import { Clock, Flag, Award, ChevronDown, ChevronUp } from 'lucide-react';
+import { Clock, Flag, Award, ChevronDown, ChevronUp, BookOpen, MapPin, Calendar } from 'lucide-react';
 
 interface Props {
   highContrast: boolean;
 }
 
 const PERIOD_COLORS: Record<string, string> = {
+  'Preistorie': '#8B4513',
   'Întemeiere': '#8B4513',
+  'Perioada Medievală': '#6B4423',
   'Imperiul Rus': '#4A90D9',
   'România Mare': '#FFD700',
   'Epoca Sovietică': '#C41E3A',
@@ -38,17 +40,17 @@ export const History: React.FC<Props> = ({ highContrast }) => {
       <section className="relative h-[500px] overflow-hidden">
         <img
           src="https://picsum.photos/1920/800?random=historic"
-          alt="Istorie Pociumbăuți"
+          alt="Istorie Dancu"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80 flex items-center justify-center">
           <div className="text-center text-white max-w-4xl mx-auto px-4">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Istoric și Identitate</h1>
             <p className="text-2xl opacity-90 mb-4">
-              Pociumbăuți: <span className="text-yellow-400 font-bold">313 ani</span> de istorie, tradiție și reziliență
+              Dancu: <span className="text-yellow-400 font-bold">441 de ani</span> de istorie documentată
             </p>
             <p className="text-lg opacity-80">
-              De la prima atestare documentară în 1711 până în prezent - o comunitate mândră de rădăcinile sale.
+              De la prima atestare documentară în 1584 (sub numele Ușerești) până în prezent - un sat mândru de rădăcinile sale.
             </p>
           </div>
         </div>
@@ -56,45 +58,96 @@ export const History: React.FC<Props> = ({ highContrast }) => {
 
       <div className="container mx-auto px-4 py-12 space-y-16">
 
-        {/* Monument Section - Featured */}
+        {/* Document Istoric Section - Featured */}
         <section className={`rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row ${highContrast ? 'bg-gray-900 border-2 border-yellow-400' : 'bg-white'}`}>
           <div className="md:w-1/2 relative min-h-[400px]">
             <img
-              src="https://picsum.photos/800/800?random=monument"
-              alt="Monumentul Eroilor"
+              src="https://picsum.photos/800/800?random=document"
+              alt="Document Istoric 1584"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
               <div className="text-white">
-                <span className="bg-moldova-red px-3 py-1 text-xs font-bold uppercase rounded mb-2 inline-block">
-                  Proiect Major 2025
+                <span className="bg-amber-600 px-3 py-1 text-xs font-bold uppercase rounded mb-2 inline-block">
+                  Prima Atestare Documentară
                 </span>
-                <h3 className="text-2xl font-bold">Monumentul Eroilor (1938-2025)</h3>
+                <h3 className="text-2xl font-bold">5 Mai 1584 - UȘEREȘTI</h3>
               </div>
             </div>
           </div>
           <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-            <h2 className={`text-3xl font-bold mb-6 ${highContrast ? 'text-white' : 'text-moldova-blue'}`}>
-              Renașterea Memoriei
+            <h2 className={`text-3xl font-bold mb-6 ${highContrast ? 'text-white' : 'text-green-700'}`}>
+              <BookOpen className="inline mr-2" /> Originea Numelui Dancu
             </h2>
             <p className={`mb-4 leading-relaxed ${textClass}`}>
-              În <strong>1938</strong>, Căminul Cultural "Regina Maria" a ridicat un monument dedicat eroilor
-              din Primul Război Mondial - aproximativ <strong>40-50 soldați</strong> din Pociumbăuți care
-              și-au dat viața pentru țară.
+              Satul este atestat documentar pentru prima dată la <strong>5 Mai 1584</strong> sub numele
+              <strong> UȘEREȘTI</strong>, în timpul domniei lui Petru Vodă, în ținutul Lăpușnei.
             </p>
             <p className={`mb-4 leading-relaxed ${textClass}`}>
-              Distrus în perioada sovietică, piatra decorativă originală a fost păstrată eroic de
-              <strong> Aurica Dumbravă</strong> timp de <strong>40 de ani</strong>.
+              În <strong>secolul al XVIII-lea</strong>, moșia Ușerești devine proprietatea
+              <strong> Mănăstirii Dancu</strong> din Iași (ctitorită în 1541 de boierul Jurie Dancu).
             </p>
             <p className={`mb-6 leading-relaxed ${textClass}`}>
-              Pe <strong className="text-moldova-red">18 iulie 2025</strong>, într-un parteneriat istoric
-              între Primărie și Asociația "Monumentum", va fi inaugurat monumentul reconstruit fidel
-              după planurile originale din 1938.
+              Cu timpul, localitatea capătă numele <strong>DANCU</strong> după mănăstirea proprietară,
+              iar vechea denumire Ușerești este dată treptat uitării.
             </p>
-            <div className={`p-4 rounded-lg border-l-4 ${highContrast ? 'bg-gray-800 border-yellow-400' : 'bg-blue-50 border-moldova-blue'}`}>
-              <p className="font-serif italic">
-                "Un popor care nu-și cunoaște istoria este ca un copil care nu-și cunoaște părinții."
+            <div className={`p-4 rounded-lg border-l-4 ${highContrast ? 'bg-gray-800 border-amber-400' : 'bg-amber-50 border-amber-500'}`}>
+              <p className="font-serif italic text-sm">
+                "Înștiințare facem prin aciasta carte a noastră... pe satul Ușereștii, în ținutul Lăpușnei..."
               </p>
+              <p className="text-xs mt-2 opacity-70">— Fragment din documentul original, 1584</p>
+            </div>
+          </div>
+        </section>
+
+        {/* DancuFarm & Impact Modern */}
+        <section className={`rounded-3xl overflow-hidden ${highContrast ? 'bg-gray-900 border-2 border-amber-500' : 'bg-gradient-to-r from-amber-50 to-orange-50'}`}>
+          <div className="p-8 md:p-12">
+            <div className="flex items-center gap-4 mb-6">
+              <span className="text-5xl">🧀</span>
+              <div>
+                <h2 className={`text-3xl font-bold ${highContrast ? 'text-amber-400' : 'text-amber-700'}`}>
+                  DancuFarm - Renașterea Economică
+                </h2>
+                <p className={textClass}>2011-prezent: Cea mai mare poveste de succes a satului</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <p className={`mb-4 ${textClass}`}>
+                  În <strong>2011</strong>, Dumitru Cravcenco înființează ferma de bovine care va deveni
+                  celebra <strong>DancuFarm</strong> - fabrica de cașcavaluri artizanale după rețete europene.
+                </p>
+                <p className={`mb-4 ${textClass}`}>
+                  Cu training internațional în <strong>SUA, Olanda, Irlanda și Marea Britanie</strong>,
+                  DancuFarm produce acum 4 sortimente de cașcaval (Gouda, Cheddar, Geak) - 100% natural.
+                </p>
+                <p className={textClass}>
+                  La <strong>16 Mai 2025</strong>, Prim-ministrul Dorin Recean a vizitat fabrica,
+                  recunoscând modelul de afacere socială inovatoare.
+                </p>
+              </div>
+              <div className={`p-6 rounded-xl ${highContrast ? 'bg-gray-800' : 'bg-white'}`}>
+                <h4 className="font-bold mb-4">Impact Social DancuFarm:</h4>
+                <ul className={`space-y-2 ${textClass}`}>
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-500">✓</span>
+                    75 familii de bătrâni - prânz cald 3x/săptămână
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-500">✓</span>
+                    ~30 studenți cu burse anuale
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-500">✓</span>
+                    ~300 vizitatori/an (turism educațional)
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-green-500">✓</span>
+                    Panouri solare 30 kW (2024)
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -102,7 +155,7 @@ export const History: React.FC<Props> = ({ highContrast }) => {
         {/* Simboluri Oficiale */}
         <section>
           <div className="flex items-center gap-3 mb-8">
-            <div className={`p-3 rounded-full ${highContrast ? 'bg-yellow-400 text-black' : 'bg-moldova-blue text-white'}`}>
+            <div className={`p-3 rounded-full ${highContrast ? 'bg-yellow-400 text-black' : 'bg-green-600 text-white'}`}>
               <Flag size={24} />
             </div>
             <h2 className={`text-3xl font-bold ${highContrast ? 'text-yellow-400' : 'text-moldova-charcoal'}`}>
@@ -116,7 +169,7 @@ export const History: React.FC<Props> = ({ highContrast }) => {
               <div className="flex items-center gap-3 mb-4">
                 <Award className="text-amber-500" size={32} />
                 <h3 className={`text-2xl font-bold ${highContrast ? 'text-white' : 'text-moldova-charcoal'}`}>
-                  Stema Comunei
+                  Stema Satului
                 </h3>
               </div>
               <p className={`mb-4 ${textClass}`}>{OFFICIAL_SYMBOLS.stema.descriere}</p>
@@ -124,17 +177,14 @@ export const History: React.FC<Props> = ({ highContrast }) => {
                 {OFFICIAL_SYMBOLS.stema.culori.map((culoare, idx) => (
                   <span
                     key={idx}
-                    className={`px-3 py-1 rounded-full text-sm ${idx === 0 ? 'bg-blue-100 text-blue-700' :
-                        idx === 1 ? 'bg-amber-100 text-amber-700' : 'bg-green-100 text-green-700'
+                    className={`px-3 py-1 rounded-full text-sm ${idx === 0 ? 'bg-green-100 text-green-700' :
+                        idx === 1 ? 'bg-blue-100 text-blue-700' : 'bg-amber-100 text-amber-700'
                       }`}
                   >
                     {culoare}
                   </span>
                 ))}
               </div>
-              <p className={`text-sm ${textClass}`}>
-                <strong>Aprobare:</strong> {OFFICIAL_SYMBOLS.stema.aprobare}
-              </p>
               <p className={`text-sm ${textClass}`}>
                 <strong>Semnificație:</strong> {OFFICIAL_SYMBOLS.stema.semnificatie}
               </p>
@@ -143,9 +193,9 @@ export const History: React.FC<Props> = ({ highContrast }) => {
             {/* Drapel */}
             <div className={cardClass}>
               <div className="flex items-center gap-3 mb-4">
-                <Flag className="text-moldova-blue" size={32} />
+                <Flag className="text-green-600" size={32} />
                 <h3 className={`text-2xl font-bold ${highContrast ? 'text-white' : 'text-moldova-charcoal'}`}>
-                  Drapelul Comunei
+                  Drapelul Satului
                 </h3>
               </div>
               <p className={`mb-4 ${textClass}`}>{OFFICIAL_SYMBOLS.drapel.descriere}</p>
@@ -153,23 +203,20 @@ export const History: React.FC<Props> = ({ highContrast }) => {
                 {OFFICIAL_SYMBOLS.drapel.culori.map((culoare, idx) => (
                   <span
                     key={idx}
-                    className={`px-3 py-1 rounded-full text-sm ${idx === 0 ? 'bg-blue-100 text-blue-700' :
-                        idx === 1 ? 'bg-amber-100 text-amber-700' : 'bg-green-100 text-green-700'
+                    className={`px-3 py-1 rounded-full text-sm ${idx === 0 ? 'bg-green-100 text-green-700' :
+                        idx === 1 ? 'bg-blue-100 text-blue-700' : 'bg-amber-100 text-amber-700'
                       }`}
                   >
                     {culoare}
                   </span>
                 ))}
               </div>
-              <p className={`text-sm ${textClass}`}>
-                <strong>Aprobare:</strong> {OFFICIAL_SYMBOLS.drapel.aprobare}
-              </p>
             </div>
           </div>
 
           {/* Motto */}
           <div className={`${cardClass} mt-6 text-center`}>
-            <p className={`text-2xl font-serif italic ${highContrast ? 'text-yellow-400' : 'text-moldova-blue'}`}>
+            <p className={`text-2xl font-serif italic ${highContrast ? 'text-yellow-400' : 'text-green-700'}`}>
               "{OFFICIAL_SYMBOLS.motto}"
             </p>
           </div>
@@ -182,7 +229,7 @@ export const History: React.FC<Props> = ({ highContrast }) => {
               <Clock size={24} />
             </div>
             <h2 className={`text-3xl font-bold ${highContrast ? 'text-yellow-400' : 'text-moldova-charcoal'}`}>
-              Cronologia Localității (1711-2025)
+              Cronologia Localității (1584-2025)
             </h2>
           </div>
 
@@ -263,53 +310,85 @@ export const History: React.FC<Props> = ({ highContrast }) => {
         {/* Statistics */}
         <section className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className={`${cardClass} text-center`}>
-            <p className={`text-4xl font-bold ${highContrast ? 'text-yellow-400' : 'text-moldova-blue'}`}>313</p>
+            <p className={`text-4xl font-bold ${highContrast ? 'text-yellow-400' : 'text-green-600'}`}>441</p>
             <p className={textClass}>Ani de istorie</p>
           </div>
           <div className={`${cardClass} text-center`}>
-            <p className={`text-4xl font-bold ${highContrast ? 'text-yellow-400' : 'text-moldova-blue'}`}>1711</p>
+            <p className={`text-4xl font-bold ${highContrast ? 'text-yellow-400' : 'text-green-600'}`}>1584</p>
             <p className={textClass}>Prima atestare</p>
           </div>
           <div className={`${cardClass} text-center`}>
-            <p className={`text-4xl font-bold ${highContrast ? 'text-yellow-400' : 'text-moldova-blue'}`}>1815</p>
-            <p className={textClass}>Biserica ctitorită</p>
+            <p className={`text-4xl font-bold ${highContrast ? 'text-yellow-400' : 'text-green-600'}`}>8 km</p>
+            <p className={textClass}>Până în România</p>
           </div>
           <div className={`${cardClass} text-center`}>
-            <p className={`text-4xl font-bold ${highContrast ? 'text-yellow-400' : 'text-moldova-blue'}`}>952</p>
-            <p className={textClass}>Vârf populație (1930)</p>
+            <p className={`text-4xl font-bold ${highContrast ? 'text-yellow-400' : 'text-green-600'}`}>131 ha</p>
+            <p className={textClass}>Pădure protejată</p>
           </div>
         </section>
 
-        {/* Eroii WWI */}
-        <section className={`${cardClass} border-l-4 border-moldova-red`}>
+        {/* Descoperiri Arheologice */}
+        <section className={`${cardClass} border-l-4 border-amber-600`}>
           <h2 className={`text-2xl font-bold mb-4 ${highContrast ? 'text-yellow-400' : 'text-moldova-charcoal'}`}>
-            Eroii din Primul Război Mondial
+            Descoperiri Arheologice - Necropolă Epoca Bronzului
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <p className={`mb-4 leading-relaxed ${textClass}`}>
-                Aproximativ <strong>150 de bărbați</strong> din Pociumbăuți au fost mobilizați în
-                armata țaristă în Primul Război Mondial (1914-1918).
+                Lângă satul actual Dancu a fost descoperită o <strong>necropolă</strong> datând din
+                <strong> începutul epocii bronzului</strong> (mileniul II î.Hr.).
               </p>
               <p className={`mb-4 leading-relaxed ${textClass}`}>
-                Din aceștia, <strong>40-50 soldați</strong> au căzut sau au dispărut pe fronturile
-                est-europene din Germania și Austria-Ungaria.
+                Această descoperire demonstrează că zona a fost locuită <strong>de peste 4000 de ani</strong>,
+                mult înainte de prima atestare documentară din 1584.
               </p>
               <p className={textClass}>
-                Monumentul ridicat în 1938 de Căminul Cultural "Regina Maria" le-a comemorat
-                sacrificiul, iar reconstrucția din 2025 readuce memoria lor în centrul comunității.
+                Situl arheologic confirmă importanța strategică a văii Prutului ca zonă de locuire și
+                tranzit încă din cele mai vechi timpuri.
               </p>
             </div>
-            <div className={`p-6 rounded-lg ${highContrast ? 'bg-gray-800' : 'bg-red-50'}`}>
+            <div className={`p-6 rounded-lg ${highContrast ? 'bg-gray-800' : 'bg-amber-50'}`}>
               <p className="text-center font-serif text-lg italic mb-4">
-                "Celor care au dat viața pentru libertate"
+                "O istorie de peste 4000 de ani"
               </p>
-              <p className="text-center font-bold text-xl">1914 - 1918</p>
+              <p className="text-center font-bold text-xl">Mileniul II î.Hr.</p>
               <div className="mt-4 text-center">
                 <span className={`text-sm ${textClass}`}>
-                  Inscripție de pe Monumentul Eroilor
+                  Necropolă descoperită lângă satul Dancu
                 </span>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Mănăstirea Dancu din Iași */}
+        <section className={`${cardClass} border-l-4 border-green-600`}>
+          <h2 className={`text-2xl font-bold mb-4 ${highContrast ? 'text-yellow-400' : 'text-moldova-charcoal'}`}>
+            Mănăstirea Dancu din Iași - Originea Numelui
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <p className={`mb-4 leading-relaxed ${textClass}`}>
+                Mănăstirea Dancu din Iași a fost ctitorită în <strong>1541</strong> de boierul
+                <strong> Jurie Dancu</strong> și soția sa <strong>Sofronia</strong>.
+              </p>
+              <p className={`mb-4 leading-relaxed ${textClass}`}>
+                Hramul: <strong>"Sfinții Voievozi Mihail și Gavriil"</strong>
+              </p>
+              <p className={textClass}>
+                În secolul XVIII, mănăstirea deținea 10 sate în Moldova, inclusiv moșia Ușerești
+                (actualul Dancu). De aici provine numele actual al satului.
+              </p>
+            </div>
+            <div className={`p-6 rounded-lg ${highContrast ? 'bg-gray-800' : 'bg-green-50'}`}>
+              <h4 className="font-bold mb-3">Moșii Mănăstirii Dancu:</h4>
+              <ul className={`text-sm space-y-1 ${textClass}`}>
+                <li>• Ușerești (azi Dancu) - Republica Moldova</li>
+                <li>• Ursărești și Bârlădeni - raionul Cahul</li>
+                <li>• Buciumeni - județul Vaslui</li>
+                <li>• Moara Dancului - județul Iași</li>
+                <li>• Bârzul și Vladnicul - județul Galați</li>
+              </ul>
             </div>
           </div>
         </section>

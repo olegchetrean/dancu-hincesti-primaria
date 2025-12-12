@@ -70,8 +70,9 @@ export const Contact: React.FC<Props> = ({ highContrast }) => {
                 {/* Embed OpenStreetMap via iframe in real usage, placeholder here */}
                 <div className="text-center p-4">
                     <MapPin size={48} className="mx-auto mb-2 opacity-50" />
-                    <p className="font-bold">Harta Satului Pociumbăuți</p>
-                    <p className="text-sm">Lat: 47.9958° N, Long: 27.3236° E</p>
+                    <p className="font-bold">Harta Satului Dancu</p>
+                    <p className="text-sm">Lat: 46.7578° N, Long: 28.2100° E</p>
+                    <p className="text-xs mt-2 text-green-600">La 8 km de PTF Leușeni-Albița (România)</p>
                 </div>
             </div>
 

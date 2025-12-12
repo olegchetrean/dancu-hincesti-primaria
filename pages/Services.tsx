@@ -18,7 +18,7 @@ export const Services: React.FC<Props> = ({ highContrast }) => {
           Servicii Publice
         </h1>
         <p className={`text-lg ${highContrast ? 'text-white' : 'text-gray-600'}`}>
-          Primăria Pociumbăuți oferă servicii administrative pentru cetățeni. 
+          Primăria Dancu oferă servicii administrative pentru cetățeni. 
           Majoritatea serviciilor necesită prezența fizică, însă lucrăm la digitalizare.
         </p>
       </div>

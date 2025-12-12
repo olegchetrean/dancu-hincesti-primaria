@@ -1,85 +1,93 @@
 import { ContactInfo, Decision, Announcement, Disposition, StaffMember, AdminLog, CouncilMember, GeographyData, DemographyData, InfrastructureData, HistoryEvent, EconomyData, Institution, Service } from './types';
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//                         INFORMAȚII DE CONTACT
+//                         INFORMAȚII DE CONTACT - SATUL DANCU
 // ═══════════════════════════════════════════════════════════════════════════════
 
 export const CONTACT_INFO: ContactInfo = {
-  address: "MD-5632, Pociumbăuți, Raionul Rîșcani, Republica Moldova",
-  postalCode: "MD-5632",
-  phoneMayor: "+373 256 73421",
-  phoneSecretary: "+373 256 73196",
-  email: "primaria.pociumbauti@gov.md",
-  emailMayor: "primar.pociumbauti@gov.md",
-  emailSecretary: "secretar.pociumbauti@gov.md",
-  schedule: "Luni - Vineri: 08:00 - 17:00 (Pauză 12:00-13:00)",
-  audiences: "Marți și Joi: 14:00 - 16:00",
+  address: "MD-3424, Dancu, Raionul Hîncești, Republica Moldova",
+  postalCode: "MD-3424",
+  phoneMayor: "0-269-64236",
+  phoneSecretary: "0-269-64238",
+  email: "danco@hincesti.md",
+  emailMayor: "danco@hincesti.md",
+  emailSecretary: "danco@hincesti.md",
+  schedule: "Luni - Vineri: 09:00 - 16:00",
+  audiences: "Program audiențe la primărie",
   coordinates: {
-    lat: 47.9958,
-    lng: 27.3236
+    lat: 46.757792,
+    lng: 28.209999
   },
   emergencyPhone: "112",
   distances: {
-    chisinau: "~180 km (3.5 ore)",
-    riscani: "~15 km (20 min)",
-    balti: "~45 km (45 min)",
-    frontieraUcraina: "~30 km"
+    chisinau: "76-90 km (1.5-2 ore)",
+    riscani: "43-55 km (1 oră)", // Actually Hîncești
+    balti: "N/A",
+    frontieraUcraina: "N/A"
   }
 };
 
+// Distanțe specifice pentru Dancu
+export const DANCU_DISTANCES = {
+  leuseni: "8 km (10 min) - PTF Leușeni-Albița",
+  hincesti: "43-55 km (1 oră)",
+  chisinau: "76-90 km (1.5-2 ore)",
+  romania: "8 km până la frontieră"
+};
+
 // ═══════════════════════════════════════════════════════════════════════════════
-//                         GEOGRAFIE ȘI LOCALIZARE
+//                         GEOGRAFIE ȘI LOCALIZARE - DANCU
 // ═══════════════════════════════════════════════════════════════════════════════
 
 export const GEOGRAPHY_DATA: GeographyData = {
-  numeOficial: "Comuna Pociumbăuți",
-  numeCyrillic: "Почумбэуць",
-  alias: "Pocembeuți",
-  raion: "Rîșcani",
-  regiune: "Nord Moldova",
+  numeOficial: "Satul Dancu",
+  numeCyrillic: "Данку",
+  alias: "Ușerești (denumirea istorică)",
+  raion: "Hîncești",
+  regiune: "Sud-Vest Moldova",
   fusOrar: "UTC+2 (EET), UTC+3 (EEST vara)",
 
   coordonate: {
-    lat: 47.9958,
-    lng: 27.3236
+    lat: 46.757792,
+    lng: 28.209999
   },
 
   relief: {
-    tip: "Deal moderat ondulat (toltre moldovenești)",
-    altitudine: "150-200 metri deasupra nivelului mării",
-    topografie: "Câmpii agricole cu dealuri blânde",
-    sol: "Cernoziom fertil (ideal pentru agricultură)",
-    cursuriApa: "Pârâu mic (afluent indirect Prut)"
+    tip: "Colinare, specific zonei Prutului",
+    altitudine: "47 m deasupra nivelului mării",
+    topografie: "Coline pitorești cu vedere spre valea Prutului",
+    sol: "Fertile, propice agriculturii și viticulturii",
+    cursuriApa: "Râul Prut (~7 km de mal în hotarul satului)"
   },
 
   climat: {
     tip: "Continental temperat",
-    vara: "Călduroasă (25-30°C), perioade secetoase",
-    iarna: "Rece (-5 la -15°C), zăpadă moderată",
-    precipitatii: "450-550 mm/an (concentrat primăvară-vară)",
-    vanturi: "Predominant nord-est (crivăț iarna)"
+    vara: "Călduroasă (25-32°C)",
+    iarna: "Moderată (-3 la -10°C)",
+    precipitatii: "500-600 mm/an",
+    vanturi: "Moderate din vest"
   },
 
   peisaj: [
-    { emoji: "🌾", descriere: "Câmpii de grâu auriu la apus (iunie-iulie)" },
-    { emoji: "🌻", descriere: "Lanuri de floarea-soarelui (iulie-august)" },
-    { emoji: "🌳", descriere: "Centuri forestiere de protecție (salcâm, stejar)" },
-    { emoji: "⛰️", descriere: "Dealuri blânde cu vii mici" },
-    { emoji: "🏡", descriere: "Case tradiționale moldovenești (curte cu vie, grădină)" }
+    { emoji: "🏞️", descriere: "Valea pitorească a Prutului" },
+    { emoji: "🌲", descriere: "Rezervația Silvică Dancu (131 ha protejați)" },
+    { emoji: "🌾", descriere: "Câmpuri agricole și vii" },
+    { emoji: "🏖️", descriere: "Plaje naturale: Vad și Ciulinosu" },
+    { emoji: "🧀", descriere: "DancuFarm - fabrica de cașcavaluri artizanale" }
   ],
 
   flora: [
-    "Grâu, porumb, floarea-soarelui (culturi principale)",
-    "Salcâm, stejar, arțar (păduri și perdele)",
-    "Nuci, pruni, cireși, meri (livezi gospodărești)",
-    "Stepă: salvie, troscot, măcrișuri"
+    "Păduri de stejar, frasin, carpen, tei (Rezervația Silvică)",
+    "Viță de vie (podgorii locale)",
+    "Pomi fructiferi (nuci, pruni, meri)",
+    "Vegetație specifică silvo-stepei"
   ],
 
   fauna: [
-    "Păsări: rândunele, cucuvele, ciocârlii, barze",
-    "Mamifere mici: iepuri, nevăstuici, arici",
-    "Domestice: vaci, porci, oi, găini",
-    "Insecte: albine (apicultură tradițională)"
+    "Mamifere: căprioare, vulpi, iepuri (în rezervație)",
+    "Păsări: diverse specii protejate",
+    "Fauna acvatică în râul Prut",
+    "Animale domestice: vaci (inclusiv rasa Jersey la DancuFarm)"
   ]
 };
 
@@ -88,76 +96,76 @@ export const GEOGRAPHY_DATA: GeographyData = {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 export const DEMOGRAPHY_DATA: DemographyData = {
-  populatieTotal: 593,
-  dataRecensament: "14 mai 2014",
-  populatieEstimata2024: 520,
-  gospodarii: 244,
+  populatieTotal: 1206,
+  dataRecensament: "2014",
+  populatieEstimata2024: 1100,
+  gospodarii: 496,
 
   structuraGen: {
-    barbati: { numar: 285, procent: 48.1 },
-    femei: { numar: 308, procent: 51.9 }
+    barbati: { numar: 590, procent: 48.9 },
+    femei: { numar: 616, procent: 51.1 }
   },
 
   structuraVarsta: {
-    copii: { interval: "0-14 ani", numar: 83, procent: 14.0 },
-    adulti: { interval: "15-64 ani", numar: 386, procent: 65.1 },
-    varstnici: { interval: "65+ ani", numar: 124, procent: 20.9 }
+    copii: { interval: "0-14 ani", numar: 220, procent: 18.2 },
+    adulti: { interval: "15-64 ani", numar: 780, procent: 64.7 },
+    varstnici: { interval: "65+ ani", numar: 206, procent: 17.1 }
   },
 
-  varstaMediana: 42.4,
+  varstaMediana: 38.5,
 
   componentaEtnica: [
-    { etnie: "Moldoveni/Români", numar: 578, procent: 97.5 },
-    { etnie: "Ucraineni", numar: 12, procent: 2.0 },
-    { etnie: "Ruși", numar: 3, procent: 0.5 }
+    { etnie: "Moldoveni/Români", numar: 1135, procent: 94.08 },
+    { etnie: "Ucraineni", numar: 83, procent: 6.85 },
+    { etnie: "Ruși", numar: 3, procent: 0.25 },
+    { etnie: "Bulgari", numar: 1, procent: 0.06 }
   ],
 
   limbaMaterna: [
-    { limba: "Română/Moldovenească", procent: 97.8 },
-    { limba: "Rusă", procent: 1.7 },
-    { limba: "Ucraineană", procent: 0.5 }
+    { limba: "Română/Moldovenească", procent: 94.1 },
+    { limba: "Ucraineană", procent: 5.5 },
+    { limba: "Rusă", procent: 0.4 }
   ],
 
   religie: [
-    { confesiune: "Ortodocși (Biserica Ortodoxă Moldovenească)", procent: 99.5 },
-    { confesiune: "Alții/Nicio religie", procent: 0.5 }
+    { confesiune: "Ortodocși", procent: 98.5 },
+    { confesiune: "Alții/Nicio religie", procent: 1.5 }
   ],
 
   educatie: [
-    { nivel: "Fără educație", procent: 1.2 },
-    { nivel: "Primară (1-4 clase)", procent: 8.5 },
-    { nivel: "Gimnazială (5-9 clase)", procent: 32.8 },
-    { nivel: "Liceu (10-12 clase)", procent: 41.3 },
-    { nivel: "Profesională", procent: 11.7 },
-    { nivel: "Superioară", procent: 4.5 }
+    { nivel: "Fără educație", procent: 1.0 },
+    { nivel: "Primară (1-4 clase)", procent: 8.0 },
+    { nivel: "Gimnazială (5-9 clase)", procent: 35.0 },
+    { nivel: "Liceu (10-12 clase)", procent: 40.0 },
+    { nivel: "Profesională", procent: 12.0 },
+    { nivel: "Superioară", procent: 4.0 }
   ],
 
   migratie: {
-    trend: "Depopulare treptată",
-    evolutie: "2004: ~850 → 2014: 593 → 2024: ~520 (estimat)",
-    diaspora: "~150-200 persoane",
+    trend: "Depopulare treptată (-24.9% între 2004-2014)",
+    evolutie: "2004: 1.605 → 2014: 1.206",
+    diaspora: "~200-300 persoane",
     destinatii: [
-      { tara: "Rusia", procent: 40, orase: "Moscova, Sankt Petersburg" },
-      { tara: "Italia", procent: 25, orase: "Îngrijire bătrâni, agricultură" },
+      { tara: "Italia", procent: 35, orase: "Îngrijire bătrâni, agricultură" },
+      { tara: "Rusia", procent: 25, orase: "Moscova, construcții" },
+      { tara: "România", procent: 20, orase: "Acces facil (8 km de frontieră)" },
       { tara: "Franța", procent: 10 },
-      { tara: "Germania", procent: 10 },
-      { tara: "Israel", procent: 8 },
-      { tara: "România", procent: 5 },
-      { tara: "Altele", procent: 2 }
+      { tara: "Germania", procent: 5 },
+      { tara: "Altele", procent: 5 }
     ],
-    remitente: "~30-40% din bugetul familiilor primesc bani din diaspora"
+    remitente: "~35% din bugetul familiilor primesc bani din diaspora"
   },
 
   natalitate: {
-    nasteriPeAn: "4-6 copii",
-    decesePeAn: "10-12 persoane",
-    soldNatural: "NEGATIV (-5 la -7 persoane/an)"
+    nasteriPeAn: "10-15 copii",
+    decesePeAn: "15-20 persoane",
+    soldNatural: "NEGATIV (-5 la -8 persoane/an)"
   },
 
   sperantaViata: {
-    barbati: 65,
-    femei: 73,
-    medie: 69
+    barbati: 67,
+    femei: 74,
+    medie: 70
   }
 };
 
@@ -167,23 +175,24 @@ export const DEMOGRAPHY_DATA: DemographyData = {
 
 export const INFRASTRUCTURE_DATA: InfrastructureData = {
   drumuri: {
-    drumPrincipal: "M3 (Chișinău - Bălți - Edineț) → R41 → drum local",
-    stare: "Asfalt pe drum național, piatră spartă pe străzile satului",
-    lungimeRetea: "~8 km (6 străzi principale)",
-    trotuare: "Parțiale, doar pe artere principale",
-    iluminatPublic: "Existant, dar insuficient (50% acoperire)"
+    drumPrincipal: "Drum asfaltat de la Leușeni (8 km)",
+    stare: "Bună - reabilitat în 2021 (0,5 km cu 1,74 mil lei din FNDRL)",
+    lungimeRetea: "~10 km (străzi principale)",
+    trotuare: "Parțiale, pe arterele principale",
+    iluminatPublic: "Existant, în extindere"
   },
 
   transportPublic: [
-    { ruta: "Pociumbăuți → Rîșcani", frecventa: "2-3 curse/zi" },
-    { ruta: "Rîșcani → Chișinău", frecventa: "4-5 curse/zi", durata: "~3.5 ore (via Bălți)" }
+    { ruta: "Dancu → Hîncești", frecventa: "2-3 curse/zi", durata: "~1 oră" },
+    { ruta: "Dancu → Leușeni", frecventa: "La cerere", durata: "10 min" },
+    { ruta: "Hîncești → Chișinău", frecventa: "Multiple/zi", durata: "~1.5 ore" }
   ],
 
   apaCanalizare: {
-    reteaApa: { acoperire: 65.6, nota: "gospodării conectate" },
-    apaDinFantani: { acoperire: 34.4, nota: "risc calitate apă" },
-    canalizare: { acoperire: 12.7, nota: "FOARTE SCĂZUT" },
-    faraCanalizare: { acoperire: 87.3, nota: "toalete în curte, fose septice" },
+    reteaApa: { acoperire: 0, nota: "NU există apeduct centralizat" },
+    apaDinFantani: { acoperire: 100, nota: "Fântâni individuale" },
+    canalizare: { acoperire: 0, nota: "Fose septice individuale" },
+    faraCanalizare: { acoperire: 100, nota: "Toate gospodăriile" },
     statiiEpurare: "INEXISTENTE"
   },
 
@@ -191,98 +200,112 @@ export const INFRASTRUCTURE_DATA: InfrastructureData = {
     acoperire: 100,
     furnizor: "Premier Energy",
     tensiune: "220V/50Hz",
-    intreruperi: "Rare, dar posibile iarna (viscol, gheață)"
+    intreruperi: "Rare"
   },
 
   gazNatural: {
     reteaGaz: false,
     incalzire: [
-      { tip: "Lemne", procent: 70 },
-      { tip: "Cărbune", procent: 20 },
+      { tip: "Lemne", procent: 75 },
+      { tip: "Cărbune", procent: 15 },
       { tip: "Electric", procent: 10 }
     ],
-    gatit: "Butelii GPL (gaz propan), electrice, sobă lemne"
+    gatit: "Butelii GPL, electric, sobă lemne"
   },
 
   telecomInternet: {
-    telefonieFixa: { operator: "Moldtelecom", penetrare: 30 },
+    telefonieFixa: { operator: "Moldtelecom", penetrare: 40 },
     telefonieMobila: [
-      { operator: "Orange", acoperire: "4G (cel mai bun semnal)" },
-      { operator: "Moldcell", acoperire: "3G/4G (bună)" },
-      { operator: "Unite", acoperire: "3G (moderată)" }
+      { operator: "Moldcell", acoperire: "4G (bună)" },
+      { operator: "Orange", acoperire: "4G (bună)" },
+      { operator: "Moldtelecom", acoperire: "3G/4G" }
     ],
     internetFix: {
-      operator: "Moldtelecom ADSL",
-      viteza: "~10 Mbps",
-      penetrare: 50
+      operator: "Moldtelecom + alții",
+      viteza: "10-50 Mbps",
+      penetrare: 60
     },
-    vitezaMedie: "5-15 Mbps (LENT comparativ urban)",
-    wifiPublic: "INEXISTENT (doar primărie și școală)"
+    vitezaMedie: "15-30 Mbps",
+    wifiPublic: "La primărie și școală"
   },
 
   salubritate: {
-    colectareGunoi: "Contract privat (1x săptămână)",
-    tomberoane: "10 puncte colectare în sat",
-    reciclare: "INEXISTENTĂ",
-    gropaGunoi: "La marginea satului (problemă ecologică)"
+    colectareGunoi: "Contract cu operator specializat",
+    tomberoane: "Puncte de colectare în sat",
+    reciclare: "În dezvoltare",
+    gropaGunoi: "Eliminată - colectare centralizată"
   },
 
   cimitir: {
-    locatie: "La ieșirea din sat (spre nord)",
-    suprafata: "~2 hectare",
-    capela: "Existentă, renovată 2018"
+    locatie: "La marginea satului",
+    suprafata: "~3 hectare",
+    capela: "Existentă"
   }
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
-//                         ISTORIC COMPLET 1711-2024
+//                         PTF LEUȘENI-ALBIȚA - AVANTAJ STRATEGIC
+// ═══════════════════════════════════════════════════════════════════════════════
+
+export const PTF_LEUSENI = {
+  distanta: "8 km de satul Dancu",
+  timpCalatorie: "10 minute cu mașina",
+  status: "Punct de Trecere Frontieră INTERNAȚIONAL RUTIER",
+  implementareControlCoordonat: "15 aprilie 2023",
+
+  trafic: {
+    persoaneAnual: "3.6 milioane (2022)",
+    vehiculeAnual: "500.000+",
+    program: "24/7/365"
+  },
+
+  avantaje: [
+    "Oprire unică pe partea română (reducere timp 30-50%)",
+    "Acces rapid la România și UE",
+    "Export facil produse locale (DancuFarm)",
+    "Turism transfrontalier",
+    "Oportunități business moldo-române"
+  ],
+
+  proiectViitor: "Pod nou cu 4 benzi (aprobat 2025)"
+};
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//                         ISTORIC COMPLET 1584-2025
 // ═══════════════════════════════════════════════════════════════════════════════
 
 export const HISTORY_EVENTS: HistoryEvent[] = [
   {
-    year: "1711",
-    title: "Prima Atestare Documentară",
-    description: "Satul este menționat documentar pentru prima dată în luna februarie, în timpul războaielor ruso-otomane. Numele provine probabil de la 'pociumb' (țăruș) sau un curs de apă dispărut.",
+    year: "1584",
+    title: "Prima Atestare Documentară - UȘEREȘTI",
+    description: "Satul este menționat documentar pentru prima dată la 5 Mai 1584 sub numele UȘEREȘTI, în timpul domniei lui Petru Vodă. Documentul original în slavonă face referire la satul din ținutul Lăpușnei.",
     period: "Întemeiere",
+    important: true
+  },
+  {
+    year: "Sec. XVIII",
+    title: "Schimbarea Numelui în DANCU",
+    description: "Moșia Ușerești devine proprietatea Mănăstirii Dancu din Iași. Cu timpul, localitatea este numită DANCU după numele mănăstirii proprietare, iar vechea denumire Ușerești este dată treptat uitării.",
+    period: "Perioada Medievală",
+    important: true
+  },
+  {
+    year: "Mil. II î.Hr.",
+    title: "Necropolă din Epoca Bronzului",
+    description: "Descoperiri arheologice confirmă existența unui necropol datând din începutul mileniului II î.Hr., dovedind o istorie de locuire în zonă de peste 4000 de ani.",
+    period: "Preistorie",
     important: true
   },
   {
     year: "1812",
     title: "Anexarea Basarabiei",
-    description: "Prin Tratatul de la București, Basarabia este anexată de Imperiul Rus. Pociumbăuți trece sub administrație rusească.",
-    period: "Imperiul Rus"
-  },
-  {
-    year: "1815",
-    title: "Construcția Bisericii 'Sf. Arhanghel Mihail'",
-    description: "Ctitorită de Vasile Stroescu, biserica din piatră în stil moldovenesc-bizantin devine centrul spiritual al comunității. Renovată în 1925, 1990 și 2010, rămâne funcțională până astăzi.",
-    period: "Imperiul Rus",
-    important: true
-  },
-  {
-    year: "1817",
-    title: "Primul Recensământ",
-    description: "Sunt înregistrate 51 de gospodării și 65 capete de familie pe moșia lui Nicolai Rosetti.",
+    description: "Prin Tratatul de la București, Basarabia este anexată de Imperiul Rus. Dancu trece sub administrație rusească.",
     period: "Imperiul Rus"
   },
   {
     year: "1918",
     title: "Unirea cu România",
-    description: "La 27 martie, Basarabia se unește cu România. Pociumbăuți devine parte din Județul Soroca, România Mare.",
-    period: "România Mare",
-    important: true
-  },
-  {
-    year: "1930",
-    title: "Vârful Demografic",
-    description: "952 de locuitori - cel mai mare număr din istoria satului. Comunitatea avea 3 mori de apă, carieră de piatră și o cooperativă agricolă prosperă.",
-    period: "România Mare",
-    important: true
-  },
-  {
-    year: "1938",
-    title: "Monumentul Eroilor WWI",
-    description: "Căminul Cultural 'Regina Maria' ridică un monument dedicat eroilor căzuți în Primul Război Mondial (~40-50 soldați din sat).",
+    description: "La 27 martie, Basarabia se unește cu România. Dancu devine parte din România Mare.",
     period: "România Mare",
     important: true
   },
@@ -293,53 +316,62 @@ export const HISTORY_EVENTS: HistoryEvent[] = [
     period: "Epoca Sovietică"
   },
   {
-    year: "1944",
-    title: "Reocuparea Sovietică",
-    description: "Armata Roșie reconchestează Basarabia. Urmează deportări NKVD în Siberia (1949, 1951) - ~10-15 familii din sat.",
-    period: "Epoca Sovietică"
-  },
-  {
-    year: "1948-1950",
-    title: "Colectivizarea",
-    description: "Pământurile sunt confiscate și organizate în colhoz. Biserica este închisă în 1960, folosită ca depozit până în 1989.",
-    period: "Epoca Sovietică"
-  },
-  {
-    year: "1965",
-    title: "Casa de Cultură",
-    description: "Construcția Casei de Cultură în stil sovietic, cu capacitate de ~150 persoane.",
-    period: "Epoca Sovietică"
-  },
-  {
     year: "1991",
     title: "Independența Moldovei",
-    description: "La 27 august, Moldova își declară independența. Colhozul este desființat treptat, pământul fiind împărțit familiilor (1998-2000).",
+    description: "La 27 august, Moldova își declară independența. Dancu devine parte din raionul Hîncești.",
     period: "Independența",
     important: true
   },
   {
-    year: "2014",
-    title: "Recensământul Populației",
-    description: "Se înregistrează oficial 593 de locuitori în 244 de gospodării. Populația scăzuse de la ~850 în 2004.",
+    year: "2011",
+    title: "Înființarea DancuFarm",
+    description: "Dumitru Cravcenco înființează ferma de bovine care va deveni celebra DancuFarm - fabrica de cașcavaluri artizanale.",
+    period: "Epoca Modernă",
+    important: true
+  },
+  {
+    year: "2013-2014",
+    title: "Grădinița Andrieș",
+    description: "Este construită grădinița modernă 'Andrieș' cu capacitate de 45 copii.",
+    period: "Epoca Modernă"
+  },
+  {
+    year: "2015-2016",
+    title: "Lansare Producție Cașcaval",
+    description: "DancuFarm lansează producția de cașcaval artizanal după rețete europene (Gouda, Cheddar), devenind rapid un brand recunoscut.",
+    period: "Epoca Modernă",
+    important: true
+  },
+  {
+    year: "2021",
+    title: "Reabilitare Drum și Teren Joacă",
+    description: "Proiecte de dezvoltare: 0,5 km drum reabilitat (1,74 mil lei din FNDRL) și teren de joacă modern la grădiniță (800.000 lei, program 'Satul European').",
     period: "Epoca Modernă"
   },
   {
     year: "2023",
-    title: "Simboluri Oficiale",
-    description: "La 14 decembrie, Consiliul Local aprobă oficial Stema și Drapelul comunei, incluzând trandafirii familiei Rosetti și potcoava familiei Stroescu.",
+    title: "Alegeri Locale - Noul Primar",
+    description: "La 5 noiembrie 2023, Iurie GRIGOREȚ (PSDE) este ales primar al satului Dancu, după 16 ani de mandat al lui Vladimir Pretuleac.",
     period: "Epoca Modernă",
     important: true
   },
   {
     year: "2023",
-    title: "Alegeri Locale",
-    description: "La 5 noiembrie, Lorentii Lisevici (PSRM) este ales primar. Consiliul Local are 9 membri din 4 formațiuni politice.",
+    title: "Control Coordonat PTF Leușeni",
+    description: "La 15 aprilie 2023 se implementează controlul coordonat moldo-român la PTF Leușeni-Albița (8 km de Dancu), reducând timpul de trecere cu 30-50%.",
     period: "Epoca Modernă"
   },
   {
+    year: "2024",
+    title: "Panouri Solare și Brutărie DancuFarm",
+    description: "DancuFarm instalează sistem fotovoltaic de 30 kW și deschide brutărie artizanală. Investiții cu sprijin elvețian și PNUD.",
+    period: "Epoca Modernă",
+    important: true
+  },
+  {
     year: "2025",
-    title: "Reconstrucția Monumentului",
-    description: "Pe 18 iulie, într-un parteneriat istoric între Primărie și Asociația 'Monumentum', va fi inaugurat monumentul reconstruit fidel după planurile din 1938. Piatra decorativă originală, păstrată eroic de Aurica Dumbravă timp de 40 de ani.",
+    title: "Vizită Prim-ministru la DancuFarm",
+    description: "La 16 Mai 2025, Prim-ministrul Dorin Recean vizitează DancuFarm, recunoscând modelul de afacere socială inovatoare și sustenabilă.",
     period: "Epoca Modernă",
     important: true
   }
@@ -352,94 +384,181 @@ export const HISTORY_HIGHLIGHTS = HISTORY_EVENTS.filter(e => e.important).map(e 
 }));
 
 // ═══════════════════════════════════════════════════════════════════════════════
+//                         DANCUFARM - AFACERE SOCIALĂ DE SUCCES
+// ═══════════════════════════════════════════════════════════════════════════════
+
+export const DANCUFARM_DATA = {
+  numeOficial: "Asociația de Caritate Dancu-Tabita / DancuFarm",
+  website: "natykrav.wixsite.com/dancufarm",
+  fondator: "Dumitru CRAVCENCO",
+  manager: "Natalia SIMAȘCO",
+  anInfiintare: 2011,
+  anLansareCascaval: "2015-2016",
+
+  trainingInternational: [
+    "Pennsylvania, SUA - tehnologii americane",
+    "Olanda - metode tradiționale (Gouda)",
+    "Irlanda - tehnici de maturare",
+    "Marea Britanie - școala britanică de cheddar"
+  ],
+
+  ferma: {
+    efectivTotal: "48-50 vaci lactifere",
+    rasaJersey: "21 capete (lapte cu grăsime ridicată 5-6%)",
+    alteRase: "27-29 capete mixte"
+  },
+
+  productie: {
+    lunar: "600-700 kg cașcaval",
+    anual: "8-10 tone",
+    filosofie: "100% natural, zero aditivi artificiali"
+  },
+
+  sortimente: [
+    { nume: "Gouda", descriere: "Stil olandez, maturare minim 2 luni, onctuos" },
+    { nume: "Cheddar", descriere: "Stil englez, textură fermă, gust intens" },
+    { nume: "Geak Clasic", descriere: "Rețetă proprietară, echilibrat, versatil" },
+    { nume: "Geak cu Ardei Roșu Picant", descriere: "Gust iute, piper roșu integrat" }
+  ],
+
+  tehnologie: [
+    "Cheag natural de BIVOL",
+    "Maturare în camere frigorifice dedicate",
+    "Zero conservanți sau coloranți",
+    "Lapte 100% de la ferma proprie"
+  ],
+
+  inovatii2024: {
+    panourtiFotovoltaice: "30 kW (economie ~180.000 lei/an)",
+    brutarie: "Pâine artizanală, patiserie",
+    produseNoi: "Smântână, unt de casă"
+  },
+
+  distributie: [
+    "Chișinău: Supermarket Nr1, Fourchette",
+    "Hîncești: Magazine locale",
+    "Vânzări directe la fabrică"
+  ],
+
+  turism: {
+    vizitatori: "~300/an (majoritate străini)",
+    servicii: [
+      "Tururi ghidate complete (90-120 min)",
+      "Degustări toate sortimentele",
+      "Workshop-uri interactive",
+      "Vizită fermă și camere maturare"
+    ],
+    rezervari: "Prin primărie: 0-269-64236"
+  },
+
+  impactSocial: {
+    batrani: "75 familii - 3 prânzuri/săptămână + lapte/pâine sâmbăta",
+    studenti: "~30 burse anuale",
+    copiiDizabilitati: "Îngrijire și sprijin",
+    familiiVulnerabile: "Asistență alimentară și materială"
+  },
+
+  parteneri: [
+    "Fundația Moldcell",
+    "Ambasada Franței în Moldova",
+    "Alianța Franceză",
+    "Camera de Comerț și Industrie RM"
+  ],
+
+  recunoastere: [
+    "16 Mai 2025: Vizită Prim-ministru Dorin Recean",
+    "Acoperire media națională (TV8, Publika, Moldova 1)"
+  ]
+};
+
+// ═══════════════════════════════════════════════════════════════════════════════
 //                         ECONOMIE ȘI AGRICULTURĂ
 // ═══════════════════════════════════════════════════════════════════════════════
 
 export const ECONOMY_DATA: EconomyData = {
   sectoare: [
-    { sector: "Agricultură", procent: 70 },
-    { sector: "Servicii", procent: 15 },
-    { sector: "Comerț", procent: 10 },
-    { sector: "Altele", procent: 5 }
+    { sector: "Agricultură", procent: 60 },
+    { sector: "Zootehnie/Lactate (DancuFarm)", procent: 20 },
+    { sector: "Servicii", procent: 12 },
+    { sector: "Comerț", procent: 8 }
   ],
 
   agricultura: {
-    suprafataAgricola: "~800-1000 hectare",
-    terenArabil: "950 ha",
-    pasuni: "50 ha",
-    viiLivezi: "30 ha (abandonate parțial)",
+    suprafataAgricola: "~1.088 ha (pământ arabil + culturi)",
+    terenArabil: "889 ha",
+    pasuni: "90 ha",
+    viiLivezi: "199 ha",
 
     culturiPrincipale: [
-      { cultura: "Grâu de toamnă", suprafata: 40, randament: "2.5-3.5 tone/ha", pret: "3,500-4,000 MDL/tonă" },
-      { cultura: "Porumb", suprafata: 30, randament: "3-4 tone/ha", pret: "2,500-3,000 MDL/tonă" },
-      { cultura: "Floarea-soarelui", suprafata: 20, randament: "1.5-2 tone/ha", pret: "7,000-8,000 MDL/tonă" },
-      { cultura: "Legume", suprafata: 5, randament: "variabil", pret: "piețele locale" }
+      { cultura: "Grâu de toamnă", suprafata: 35, randament: "3-4 tone/ha", pret: "3,500-4,500 MDL/tonă" },
+      { cultura: "Porumb", suprafata: 30, randament: "4-5 tone/ha", pret: "2,500-3,500 MDL/tonă" },
+      { cultura: "Floarea-soarelui", suprafata: 20, randament: "2-2.5 tone/ha", pret: "7,000-9,000 MDL/tonă" },
+      { cultura: "Viță de vie", suprafata: 15, randament: "variabil", pret: "piețele locale" }
     ],
 
     zootehnie: [
-      { animal: "Bovine", numar: "150-200 capete", nota: "vaci de lapte, 3000-4000 litri/vacă/an" },
-      { animal: "Porcine", numar: "300-400 capete", nota: "crescuți în gospodării individuale" },
-      { animal: "Păsări", numar: "5000-7000", nota: "găini ouătoare, rațe, gâște" },
-      { animal: "Ovine", numar: "100-150 capete", nota: "în declin" },
-      { animal: "Stupine", numar: "30-40", nota: "miere de salcâm" }
+      { animal: "Bovine", numar: "200+ capete", nota: "inclusiv 50 la DancuFarm" },
+      { animal: "Porcine", numar: "400-500 capete", nota: "gospodării individuale" },
+      { animal: "Păsări", numar: "5000+", nota: "găini, rațe, gâște" },
+      { animal: "Ovine", numar: "100-150 capete", nota: "creștere extensivă" },
+      { animal: "Stupine", numar: "50+", nota: "miere naturală" }
     ],
 
     mecanizare: {
-      tractoare: "15-20 (vechi sovietice și moderne)",
-      combine: "3-5 (folosite cooperativ)",
-      probleme: "Lipsa capitalului pentru modernizare"
+      tractoare: "20-25 (mix vechi și moderne)",
+      combine: "5-7 (folosite cooperativ)",
+      probleme: "Necesitate modernizare echipamente"
     }
   },
 
   agentiEconomici: {
-    fermeFamiliale: "230-240 (95% economie agricolă)",
-    srlAgricole: "2-3 (fermieri mari, >50 ha)",
-    magazineAlimentare: 3,
-    barCafenea: 1,
-    brutarie: 0,
+    fermeFamiliale: "375 gospodării țărănești de fermier",
+    srlAgricole: "5-7 (DancuFarm principal)",
+    magazineAlimentare: 4,
+    barCafenea: 2,
+    brutarie: 1, // DancuFarm
     farmacie: 0,
     statieBenzina: 0
   },
 
   venituri: {
-    venitMediuGospodarie: "30,000-40,000 MDL/an",
+    venitMediuGospodarie: "35,000-50,000 MDL/an",
     surse: [
-      { sursa: "Agricultură", suma: "15,000-20,000 MDL" },
+      { sursa: "Agricultură", suma: "15,000-25,000 MDL" },
       { sursa: "Remitențe diaspora", suma: "10,000-15,000 MDL" },
-      { sursa: "Salarii", suma: "5,000-10,000 MDL" },
-      { sursa: "Pensii", suma: "3,000-5,000 MDL" }
+      { sursa: "Salarii locale", suma: "8,000-12,000 MDL" },
+      { sursa: "Pensii", suma: "3,000-6,000 MDL" }
     ]
   },
 
   salarii: [
     { functie: "Primar", salariu: "~12,000 MDL/lună" },
     { functie: "Secretar primărie", salariu: "~8,000 MDL/lună" },
-    { functie: "Profesor", salariu: "7,000-9,000 MDL/lună" },
-    { functie: "Asistent medical", salariu: "~6,000 MDL/lună" },
-    { functie: "Muncitor necalificat", salariu: "4,000-5,000 MDL/lună" }
+    { functie: "Profesor/Educator", salariu: "8,000-10,000 MDL/lună" },
+    { functie: "Asistent medical", salariu: "~7,000 MDL/lună" },
+    { functie: "Angajat DancuFarm", salariu: "6,000-9,000 MDL/lună" }
   ],
 
   pensii: {
-    medie: "~2,500 MDL/lună",
-    maxima: "~4,000 MDL/lună",
-    minima: "~1,500 MDL/lună"
+    medie: "~2,800 MDL/lună",
+    maxima: "~4,500 MDL/lună",
+    minima: "~2,000 MDL/lună"
   },
 
   probleme: [
-    "Dependență de agricultură (vulnerabil la secetă, prețuri)",
-    "Mecanizare insuficientă (productivitate scăzută)",
-    "Lipsa industriei (zero locuri muncă industriale)",
-    "Migrație tinerilor (pierdere forță de muncă calificată)",
-    "Infrastructură slabă (drumuri, internet)",
-    "Acces limitat la credite (bănci refuză fermierii mici)"
+    "Lipsa apeductului centralizat (100% fântâni)",
+    "Lipsa gazeificării",
+    "Depopulare (emigrație tineri)",
+    "Infrastructură parțial dezvoltată",
+    "Lipsa farmacie și stație benzină"
   ],
 
   oportunitati: [
-    "Agricultura ecologică (cerere europeană)",
-    "Turism rural (case de oaspeți, agroturism)",
-    "Valorificarea tradițiilor (festivaluri, meșteșuguri)",
-    "Internet rapid (telemuncă, freelancing)",
-    "Investiții diaspora (antreprenoriat local)"
+    "DANCUFARM - model de succes pentru agroturism",
+    "Proximitate frontieră România (8 km) - export, turism",
+    "Rezervația Silvică (131 ha) - ecoturism",
+    "Plaje naturale pe Prut",
+    "Potențial viticol neexploatat"
   ]
 };
 
@@ -450,92 +569,115 @@ export const ECONOMY_DATA: EconomyData = {
 export const INSTITUTIONS: Institution[] = [
   {
     id: "primaria",
-    nume: "Primăria Comunei Pociumbăuți",
+    nume: "Primăria Satului Dancu",
     tip: "Administrație publică locală",
-    adresa: "MD-5632, Pociumbăuți, Raionul Rîșcani",
-    telefon: "+373 256 73421",
-    email: "primaria.pociumbauti@gov.md",
-    program: "Luni-Vineri: 08:00-17:00 (Pauză 12:00-13:00)",
-    descriere: "Autoritatea administrației publice locale care gestionează treburile publice ale comunei.",
+    adresa: "MD-3424, Dancu, Raionul Hîncești",
+    telefon: "0-269-64236",
+    email: "danco@hincesti.md",
+    program: "Luni-Vineri: 09:00-16:00",
+    descriere: "Autoritatea administrației publice locale care gestionează treburile publice ale satului Dancu.",
     personal: 5
   },
   {
-    id: "scoala",
-    nume: "Școala Generală Pociumbăuți",
+    id: "gimnaziu",
+    nume: "Gimnaziul Dancu",
     tip: "Instituție de învățământ",
-    adresa: "Pociumbăuți, Raionul Rîșcani",
-    descriere: "Școală primară + gimnazială (clase I-IX). Clădire renovată 2010, echipament basic IT.",
-    personal: 14,
+    adresa: "Dancu, Raionul Hîncești",
+    telefon: "0-269-64389",
+    descriere: "Instituție de învățământ primar și gimnazial. Director: Nivireanschi Vasile Petru. 14 pedagogi, ~220 elevi (93 primar + 127 gimnaziu).",
+    personal: 30,
     detalii: {
-      elevi: "60-80 (în scădere)",
-      limbiPredare: "Română (principal), Rusă (opțional)",
-      probleme: "Număr elevi scade, risc închidere clase"
+      elevi: "~220 (în scădere ușoară)",
+      limbiPredare: "Română",
+      director: "Nivireanschi Vasile Petru",
+      monument: "Monument 'Eroii căzuți pentru Apărarea Patriei' în curte"
     }
   },
   {
     id: "gradinita",
-    nume: "Grădinița (ÎNCHISĂ)",
+    nume: "Grădinița 'Andrieș'",
     tip: "Instituție de învățământ",
-    descriere: "Închisă din 2015 din cauza lipsei copiilor. Clădirea este folosită ca depozit sau sală evenimente.",
-    status: "închis"
+    adresa: "Dancu, Raionul Hîncești",
+    telefon: "0-269-64349",
+    descriere: "Grădiniță modernă construită în 2013-2014. Capacitate 45 copii. Șef: Rachiu Lilia. Teren de joacă modern instalat în 2021.",
+    personal: 8,
+    detalii: {
+      capacitate: "45 copii",
+      sef: "Rachiu Lilia",
+      renovari: "Teren joacă modern (2021, 800.000 lei, 'Satul European')"
+    }
   },
   {
-    id: "dispensar",
-    nume: "Oficiul Medicului de Familie",
+    id: "punct-medical",
+    nume: "Punctul Medical Dancu",
     tip: "Instituție medicală",
-    adresa: "Pociumbăuți",
-    descriere: "Consultații de bază, vaccinări, prim ajutor. Medic de la Rîșcani vine 1x/săptămână.",
-    personal: 1,
+    adresa: "Dancu, Raionul Hîncești",
+    telefon: "0-269-64403",
+    descriere: "Oferă servicii medicale de bază: consultații, vaccinări, prim ajutor. Personal: 1 asistent medical, 1 infirmieră.",
+    personal: 3,
     detalii: {
-      personal: "1 asistent medical (feldșer)",
-      medic: "Vine 1x/săptămână din Rîșcani",
-      urgente: "Ambulanță din Rîșcani (~20-30 min răspuns)",
-      probleme: "Fără medic permanent, fără farmacie"
+      personal: "1 asistent medical + 1 infirmieră + 1 paznic",
+      urgente: "Ambulanță din Hîncești (43-55 km)",
+      spital: "Spitalul Raional Hîncești"
     }
   },
   {
     id: "casa-cultura",
-    nume: "Casa de Cultură Pociumbăuți",
+    nume: "Casa de Cultură Dancu",
     tip: "Instituție culturală",
-    adresa: "Pociumbăuți, centru",
-    descriere: "Construită în 1965 (stil sovietic), renovată 2005 și 2018. Capacitate ~150 persoane.",
+    adresa: "Dancu, centru",
+    descriere: "Centrul cultural al satului. Director: Robu Sergiu. Găzduiește evenimente culturale, sărbători, spectacole.",
     personal: 2,
     detalii: {
+      director: "Robu Sergiu",
       activitati: [
-        "Festival 'Nunta Moldovenească' (august)",
-        "Hramul satului (noiembrie)",
-        "Spectacole copii (Crăciun, Paște)",
+        "Sărbători religioase și naționale",
+        "Spectacole și concerte",
         "Ședințe consiliu local",
-        "Cinematograf ocazional"
+        "Evenimente comunitare"
       ]
     }
   },
   {
     id: "biblioteca",
-    nume: "Biblioteca Publică Pociumbăuți",
+    nume: "Biblioteca Publică Dancu",
     tip: "Instituție culturală",
-    adresa: "Pociumbăuți",
+    adresa: "Dancu",
     program: "Luni-Vineri 09:00-17:00",
-    descriere: "~3,000 cărți, majoritar sovietice. Cititori activi: 30-40 persoane.",
+    descriere: "Bibliotecă publică cu fond de carte diversificat. Șef: Gosav Maria Pavel. Servicii de împrumut, lectură copii, evenimente literare.",
     personal: 1,
     detalii: {
-      volum: "~3,000 cărți",
-      probleme: "Cărți vechi, lipsa achiziții noi, umiditate"
+      sef: "Gosav Maria Pavel",
+      servicii: "Împrumut cărți, lectură copii, evenimente literare"
     }
   },
   {
-    id: "biserica",
-    nume: "Biserica 'Sfântul Arhanghel Mihail'",
-    tip: "Lăcaș de cult",
-    adresa: "Pociumbăuți, centru",
-    descriere: "Construită în 1815, ctitorită de Vasile Stroescu. Stil moldovenesc-bizantin. Renovată în 1925, 1990 și 2010.",
+    id: "dancufarm",
+    nume: "DancuFarm - Fabrica de Cașcavaluri",
+    tip: "Afacere socială",
+    adresa: "Dancu, Raionul Hîncești",
+    descriere: "CEA MAI IMPORTANTĂ AFACERE DIN SAT! Producție de cașcavaluri artizanale (Gouda, Cheddar, Geak), turism educațional, impact social major. ~300 vizitatori/an.",
+    personal: 15,
     detalii: {
-      constructie: "1815 (piatra)",
-      ctitor: "Vasile Stroescu",
-      stil: "Moldovenesc-bizantin",
-      enoriasi: "~400-450 (85% din populație)",
-      slujbe: "Duminică și sărbători religioase",
-      stare: "Funcțională, bine întreținută"
+      website: "natykrav.wixsite.com/dancufarm",
+      fondator: "Dumitru Cravcenco",
+      manager: "Natalia Simașco",
+      produse: "Gouda, Cheddar, Geak Clasic, Geak Picant",
+      turism: "~300 vizitatori/an, tururi ghidate, degustări"
+    }
+  },
+  {
+    id: "rezervatia",
+    nume: "Rezervația Silvică Dancu",
+    tip: "Arie naturală protejată",
+    descriere: "131 hectare de pădure protejată de stat (Categorie IV IUCN). Păduri de stejar, frasin, carpen, tei. Administrare: Gospodăria Silvică de Stat Hîncești.",
+    detalii: {
+      suprafata: "131 hectare",
+      status: "Arie Naturală Protejată de Stat",
+      categorieIUCN: "IV",
+      specii: "Stejar, frasin, carpen, tei",
+      activitatiPermise: "Plimbări, fotografiere, cercetări științifice",
+      interzis: "Tăiere arbori, vânătoare, focuri, deșeuri"
     }
   }
 ];
@@ -547,24 +689,24 @@ export const INSTITUTIONS: Institution[] = [
 export const STAFF: StaffMember[] = [
   {
     id: "mayor",
-    name: "Lorentii Lisevici",
+    name: "Iurie GRIGOREȚ",
     role: "Primar",
-    phone: "+373 256 73421",
-    email: "primar.pociumbauti@gov.md",
-    image: "https://picsum.photos/200/200?random=1",
-    bio: "Fermier din generație și lider ales al comunității, Lorentii Lisevici conduce Pociumbăuți cu dedicare și viziune pentru viitor. Ales în noiembrie 2023 pe listele PSRM.",
-    partid: "PSRM",
+    phone: "0-269-64236",
+    email: "danco@hincesti.md",
+    image: "https://picsum.photos/200/200?random=mayor",
+    bio: "Ales primar la 5 noiembrie 2023 pe listele PSDE. Conduce satul Dancu cu viziune pentru dezvoltare și transparență. Preia mandatul după 16 ani de conducere a predecesorului.",
+    partid: "PSDE",
     mandatStart: "2023",
     mandatEnd: "2027"
   },
   {
     id: "secretary",
-    name: "Irina",
+    name: "Secretar Consiliu Local",
     role: "Secretarul Consiliului Local",
-    phone: "+373 256 73196",
-    email: "secretar.pociumbauti@gov.md",
-    image: "https://picsum.photos/200/200?random=2",
-    bio: "Cu peste 20 de ani experiență în administrația publică locală, Irina asigură funcționarea zilnică a primăriei și legătura cu cetățenii."
+    phone: "0-269-64238",
+    email: "danco@hincesti.md",
+    image: "https://picsum.photos/200/200?random=secretary",
+    bio: "Asigură funcționarea zilnică a primăriei și legătura cu cetățenii. Responsabil de documentația oficială și evidența actelor."
   }
 ];
 
@@ -573,22 +715,20 @@ export const STAFF: StaffMember[] = [
 // ═══════════════════════════════════════════════════════════════════════════════
 
 export const COUNCIL_MEMBERS: CouncilMember[] = [
-  { id: "c1", name: "Consilier 1", partid: "PSRM", functie: "Consilier" },
-  { id: "c2", name: "Consilier 2", partid: "PSRM", functie: "Consilier" },
-  { id: "c3", name: "Consilier 3", partid: "PSRM", functie: "Consilier" },
-  { id: "c4", name: "Consilier 4", partid: "PAS", functie: "Consilier" },
-  { id: "c5", name: "Consilier 5", partid: "PAS", functie: "Consilier" },
+  { id: "c1", name: "Consilier 1", partid: "PSDE", functie: "Consilier" },
+  { id: "c2", name: "Consilier 2", partid: "PSDE", functie: "Consilier" },
+  { id: "c3", name: "Consilier 3", partid: "PSDE", functie: "Consilier" },
+  { id: "c4", name: "Consilier 4", partid: "PSDE", functie: "Consilier" },
+  { id: "c5", name: "Consilier 5", partid: "PSDE", functie: "Consilier" },
   { id: "c6", name: "Consilier 6", partid: "PAS", functie: "Consilier" },
-  { id: "c7", name: "Consilier 7", partid: "PSDE", functie: "Consilier" },
-  { id: "c8", name: "Consilier 8", partid: "PSDE", functie: "Consilier" },
-  { id: "c9", name: "Guzun Artur", partid: "Independent", functie: "Consilier" }
+  { id: "c7", name: "Consilier 7", partid: "PAS", functie: "Consilier" },
+  { id: "c8", name: "Consilier 8", partid: "PAS", functie: "Consilier" },
+  { id: "c9", name: "Consilier 9", partid: "PAS", functie: "Consilier" }
 ];
 
 export const COUNCIL_COMPOSITION = [
-  { partid: "PSRM", mandate: 3, procent: 33.3, culoare: "#C8102E" },
-  { partid: "PAS", mandate: 3, procent: 33.3, culoare: "#FFD700" },
-  { partid: "PSDE", mandate: 2, procent: 22.2, culoare: "#3498db" },
-  { partid: "Independent", mandate: 1, procent: 11.1, culoare: "#7F8C8D" }
+  { partid: "PSDE", mandate: 5, procent: 55.6, culoare: "#3498db" },
+  { partid: "PAS", mandate: 4, procent: 44.4, culoare: "#FFD700" }
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -602,7 +742,7 @@ export const SERVICES: Service[] = [
     titlu: "Acte și Certificate",
     descriere: "Eliberare certificate de urbanism, componență familie, titluri de proprietate.",
     documente: ["Certificat de urbanism", "Certificat de componență a familiei", "Extras din registrul agricol"],
-    program: "Luni-Vineri 08:00-17:00",
+    program: "Luni-Vineri 09:00-16:00",
     taxe: true
   },
   {
@@ -611,7 +751,7 @@ export const SERVICES: Service[] = [
     titlu: "Asistență Socială",
     descriere: "Suport pentru persoane vârstnice, ajutor social, compensații pentru perioada rece.",
     documente: ["Cerere ajutor social", "Compensații BASS"],
-    program: "Luni-Vineri 08:00-17:00"
+    program: "Luni-Vineri 09:00-16:00"
   },
   {
     id: "funciar",
@@ -619,7 +759,7 @@ export const SERVICES: Service[] = [
     titlu: "Fond Funciar",
     descriere: "Înregistrare contracte arendă, modificări titluri, cadastru.",
     documente: ["Contract de arendă", "Certificat de proprietate", "Extras cadastral"],
-    program: "Luni-Vineri 08:00-17:00",
+    program: "Luni-Vineri 09:00-16:00",
     taxe: true
   },
   {
@@ -635,7 +775,7 @@ export const SERVICES: Service[] = [
     titlu: "Stare Civilă",
     descriere: "Înregistrare nașteri, căsătorii, decese. Certificate duplicate.",
     documente: ["Certificat naștere", "Certificat căsătorie", "Certificat deces"],
-    program: "Luni-Vineri 08:00-17:00",
+    program: "Luni-Vineri 09:00-16:00",
     linkExtern: "https://servicii.gov.md"
   },
   {
@@ -644,7 +784,7 @@ export const SERVICES: Service[] = [
     titlu: "Autorizații și Avize",
     descriere: "Autorizații de construcție, avize pentru activități comerciale.",
     documente: ["Autorizație de construire", "Aviz activitate comercială"],
-    program: "Luni-Vineri 08:00-17:00",
+    program: "Luni-Vineri 09:00-16:00",
     taxe: true
   }
 ];
@@ -657,37 +797,37 @@ export const CULTURAL_EVENTS = [
   {
     id: "hram",
     nume: "Hramul Satului",
-    data: "8 noiembrie",
-    descriere: "Ziua Sfântului Arhanghel Mihail - patronul bisericii. Liturghie specială, procesiune religioasă, masă comună în curtea bisericii, muzică populară și dansuri tradiționale.",
+    data: "Toamnă (după calendar bisericesc)",
+    descriere: "Principala sărbătoare a satului. Liturghie specială, procesiune religioasă, masă comună, muzică populară și dansuri tradiționale.",
     traditie: true
   },
   {
-    id: "nunta",
-    nume: "Festival 'Nunta Moldovenească'",
-    data: "August (anual)",
-    descriere: "Reconstituire nunți tradiționale cu costume populare, hore, cântece. Participă întreaga comunitate și invitați din raion.",
-    traditie: true
+    id: "dancufarm-tour",
+    nume: "Tururi DancuFarm",
+    data: "Tot anul (cu programare)",
+    descriere: "Turism educațional la fabrica de cașcavaluri: vizită fermă, proces producție, degustări, workshop-uri. ~300 vizitatori/an.",
+    traditie: false
   },
   {
-    id: "eroi",
-    nume: "Ziua Eroilor",
-    data: "Mai",
-    descriere: "Comemorarea soldaților căzuți în războaie. Depuneri de flori la monument.",
-    traditie: true
-  },
-  {
-    id: "craciun",
-    nume: "Crăciunul",
-    data: "7 ianuarie (stil vechi)",
-    descriere: "Sărbătoare religioasă ortodoxă cu colinde tradiționale.",
-    traditie: true
-  },
-  {
-    id: "independenta",
+    id: "ziua-independentei",
     nume: "Ziua Independenței",
     data: "27 august",
     descriere: "Sărbătoare națională cu evenimente în centrul satului.",
     traditie: false
+  },
+  {
+    id: "craciun",
+    nume: "Crăciunul",
+    data: "25 decembrie / 7 ianuarie",
+    descriere: "Sărbătoare religioasă cu colinde tradiționale.",
+    traditie: true
+  },
+  {
+    id: "paste",
+    nume: "Paștele",
+    data: "Primăvară (după calendar ortodox)",
+    descriere: "Cea mai importantă sărbătoare religioasă. Liturghie, tradițiile pascale.",
+    traditie: true
   }
 ];
 
@@ -697,29 +837,29 @@ export const CULTURAL_EVENTS = [
 
 export const BUDGET_DATA = {
   an: 2025,
-  total: 3200000, // MDL
+  total: 4500000, // MDL
   moneda: "MDL",
 
   venituri: [
-    { categorie: "Impozite și taxe locale", suma: 800000, procent: 25 },
-    { categorie: "Transferuri de la bugetul de stat", suma: 1600000, procent: 50 },
-    { categorie: "Venituri proprii", suma: 400000, procent: 12.5 },
-    { categorie: "Alte venituri", suma: 400000, procent: 12.5 }
+    { categorie: "Impozite și taxe locale", suma: 1000000, procent: 22 },
+    { categorie: "Transferuri de la bugetul de stat", suma: 2500000, procent: 56 },
+    { categorie: "Venituri proprii", suma: 600000, procent: 13 },
+    { categorie: "Alte venituri", suma: 400000, procent: 9 }
   ],
 
   cheltuieli: [
-    { categorie: "Administrație publică", suma: 640000, procent: 20 },
-    { categorie: "Învățământ", suma: 960000, procent: 30 },
-    { categorie: "Cultură", suma: 320000, procent: 10 },
-    { categorie: "Infrastructură", suma: 800000, procent: 25 },
-    { categorie: "Asistență socială", suma: 320000, procent: 10 },
-    { categorie: "Rezervă", suma: 160000, procent: 5 }
+    { categorie: "Administrație publică", suma: 800000, procent: 18 },
+    { categorie: "Învățământ", suma: 1500000, procent: 33 },
+    { categorie: "Cultură", suma: 400000, procent: 9 },
+    { categorie: "Infrastructură", suma: 1200000, procent: 27 },
+    { categorie: "Asistență socială", suma: 400000, procent: 9 },
+    { categorie: "Rezervă", suma: 200000, procent: 4 }
   ],
 
   proiecte: [
-    { nume: "Reparație drumuri locale", suma: 400000, status: "planificat" },
-    { nume: "Extindere iluminat public", suma: 200000, status: "în execuție" },
-    { nume: "Reparație Casa de Cultură", suma: 150000, status: "planificat" }
+    { nume: "Întreținere drumuri locale", suma: 500000, status: "în execuție" },
+    { nume: "Extindere iluminat public", suma: 300000, status: "planificat" },
+    { nume: "Dotări școală și grădiniță", suma: 400000, status: "în execuție" }
   ]
 };
 
@@ -733,7 +873,7 @@ export const LATEST_DECISIONS: Decision[] = [
     numar: "24",
     data_emitere: "2024-11-30",
     titlu: "Cu privire la aprobarea bugetului local pentru anul 2025",
-    descriere: "Consiliul Local aprobă bugetul local pentru anul 2025 în sumă totală de 3.200.000 MDL, conform anexelor la prezenta decizie.",
+    descriere: "Consiliul Local aprobă bugetul local pentru anul 2025 în sumă totală de 4.500.000 MDL, conform anexelor la prezenta decizie.",
     tip: "normativ",
     document_pdf: "/documents/decizii/decizie_24_2024.pdf",
     publicat_rsal: true,
@@ -743,8 +883,8 @@ export const LATEST_DECISIONS: Decision[] = [
     id: "dec-23",
     numar: "23",
     data_emitere: "2024-11-15",
-    titlu: "Cu privire la înființarea comisiei pentru sărbătorile de iarnă",
-    descriere: "Se înființează comisia pentru organizarea sărbătorilor de iarnă în componența a 7 membri, conform anexei.",
+    titlu: "Cu privire la aprobarea planului de activitate pentru 2025",
+    descriere: "Se aprobă planul de activitate al primăriei pentru anul 2025.",
     tip: "normativ",
     document_pdf: "/documents/decizii/decizie_23_2024.pdf",
     publicat_rsal: true,
@@ -765,8 +905,8 @@ export const LATEST_DECISIONS: Decision[] = [
     id: "dec-21",
     numar: "21",
     data_emitere: "2024-09-25",
-    titlu: "Cu privire la reparația drumurilor locale",
-    descriere: "Se alocă suma de 400.000 MDL pentru reparația drumurilor locale în anul 2025.",
+    titlu: "Cu privire la întreținerea drumurilor locale",
+    descriere: "Se alocă suma de 500.000 MDL pentru întreținerea drumurilor locale în anul 2025.",
     tip: "normativ",
     document_pdf: "/documents/decizii/decizie_21_2024.pdf",
     publicat_rsal: true,
@@ -779,7 +919,7 @@ export const LATEST_DISPOSITIONS: Disposition[] = [
     id: "disp-45",
     numar: "45",
     data_emitere: "2024-12-05",
-    titlu: "Cu privire la aprobarea graficului de lucru pentru sărbătorile de iarnă",
+    titlu: "Cu privire la programul de lucru pentru sărbătorile de iarnă",
     descriere: "Se aprobă graficul de funcționare a primăriei în perioada sărbătorilor de iarnă 2024-2025.",
     tip: "normativ",
     document_pdf: "/documents/dispozitii/dispozitie_45_2024.pdf",
@@ -817,45 +957,44 @@ export const LATEST_DISPOSITIONS: Disposition[] = [
 export const ANNOUNCEMENTS: Announcement[] = [
   {
     id: "news-1",
-    titlu: "Ședința Consiliului Local - 15 decembrie 2024",
-    categorie: "sedinta",
+    titlu: "Vizitați DancuFarm - Fabrica de Cașcavaluri Artizanale",
+    categorie: "eveniment",
     data_publicare: "2024-12-11",
-    continut: "Consiliul Local al comunei Pociumbăuți vă invită la ședința ordinară care va avea loc pe data de 15 decembrie 2024, ora 15:00, în sala de ședințe a Primăriei. Pe ordinea de zi: raport de activitate, proiecte pentru 2025, diverse.",
-    continut_scurt: "Consiliul Local al comunei Pociumbăuți vă invită la ședința ordinară care va avea loc pe data de 15 decembrie 2024...",
+    continut: "Vă invităm să descoperiți DancuFarm, mândria satului nostru! Tururi ghidate, degustări de cașcaval Gouda, Cheddar și Geak, vizită la fermă. Rezervări la primărie: 0-269-64236.",
+    continut_scurt: "Vă invităm să descoperiți DancuFarm, mândria satului nostru! Tururi ghidate, degustări...",
     prioritate: true,
-    views: 45
+    views: 320
   },
   {
     id: "news-2",
-    titlu: "Festival 'Nunta Moldovenească' - ediția 2025",
-    categorie: "eveniment",
+    titlu: "Ședința Consiliului Local - 15 decembrie 2024",
+    categorie: "sedinta",
     data_publicare: "2024-12-10",
-    continut: "Grupul de inițiativă 'Pociumbăuțenii' vă invită la Festivalul tradițional 'Nunta Moldovenească', ediția 2025. Evenimentul va avea loc în luna august. Înscrierile pentru participanți sunt deschise!",
-    continut_scurt: "Grupul de inițiativă 'Pociumbăuțenii' vă invită la Festivalul tradițional...",
-    imagine_url: "https://picsum.photos/800/400?random=11",
+    continut: "Consiliul Local al satului Dancu vă invită la ședința ordinară care va avea loc pe data de 15 decembrie 2024, ora 15:00, în sala de ședințe a Primăriei.",
+    continut_scurt: "Consiliul Local al satului Dancu vă invită la ședința ordinară...",
     prioritate: true,
-    views: 120
+    views: 85
   },
   {
     id: "news-3",
-    titlu: "Consultări Publice: Buget 2025",
+    titlu: "La 8 km de România - Avantajul Strategic al Satului Dancu",
     categorie: "info",
     data_publicare: "2024-12-05",
-    continut: "Primăria invită toți locuitorii la dezbateri publice privind proiectul bugetului local pentru anul 2025. Propunerile pot fi depuse până la data de 20 decembrie 2024 la sediul primăriei sau prin email.",
-    continut_scurt: "Primăria invită toți locuitorii la dezbateri publice privind proiectul bugetului local...",
+    continut: "Satul Dancu se află la doar 8 km de Punctul de Trecere a Frontierei Leușeni-Albița. Cu controlul coordonat implementat în aprilie 2023, timpul de trecere s-a redus cu 30-50%.",
+    continut_scurt: "Satul Dancu se află la doar 8 km de frontiera cu România...",
     prioritate: true,
-    views: 80
+    views: 150
   },
   {
     id: "news-4",
-    titlu: "Reconstrucția Monumentului Eroilor - Actualizare",
+    titlu: "Rezervația Silvică Dancu - 131 hectare protejate",
     categorie: "info",
     data_publicare: "2024-12-01",
-    continut: "Lucrările de reconstrucție a Monumentului Eroilor din Primul Război Mondial avansează conform planului. Inaugurarea este programată pentru 18 iulie 2025. Mulțumim tuturor donatorilor și voluntarilor!",
-    continut_scurt: "Lucrările de reconstrucție a Monumentului Eroilor avansează conform planului...",
-    imagine_url: "https://picsum.photos/800/400?random=monument",
+    continut: "Descoperă comoara verde a satului nostru: Rezervația Silvică Dancu, 131 hectare de pădure protejată de stat. Trasee pentru plimbări, biodiversitate unică, educație ecologică.",
+    continut_scurt: "Descoperă comoara verde a satului: 131 hectare de pădure protejată...",
+    imagine_url: "https://picsum.photos/800/400?random=forest",
     prioritate: false,
-    views: 250
+    views: 180
   }
 ];
 
@@ -876,23 +1015,22 @@ export const USEFUL_LINKS = [
     links: [
       { nume: "Servicii.gov.md", url: "https://servicii.gov.md", descriere: "Portalul serviciilor publice" },
       { nume: "MTender", url: "https://mtender.gov.md", descriere: "Achiziții publice" },
-      { nume: "Particip.gov.md", url: "https://particip.gov.md", descriere: "Consultări publice" },
-      { nume: "Cariere.gov.md", url: "https://cariere.gov.md", descriere: "Locuri de muncă în sectorul public" }
+      { nume: "Particip.gov.md", url: "https://particip.gov.md", descriere: "Consultări publice" }
     ]
   },
   {
     categorie: "Autorități",
     links: [
-      { nume: "Consiliul Raional Rîșcani", url: "https://riscani.md", descriere: "Administrația raională" },
+      { nume: "Consiliul Raional Hîncești", url: "https://hincesti.md", descriere: "Administrația raională" },
       { nume: "Guvernul Republicii Moldova", url: "https://gov.md", descriere: "Portal guvernamental" },
-      { nume: "Cancelaria de Stat", url: "https://cancelaria.gov.md", descriere: "Acte normative" }
+      { nume: "DancuFarm", url: "https://natykrav.wixsite.com/dancufarm", descriere: "Fabrica de cașcavaluri artizanale" }
     ]
   },
   {
     categorie: "Urgențe",
     links: [
       { nume: "112 - Număr unic de urgență", url: "tel:112", descriere: "Ambulanță, Pompieri, Poliție" },
-      { nume: "Poliția Rîșcani", url: "tel:+373256223333", descriere: "Inspectoratul de Poliție" }
+      { nume: "Poliție Sector Dancu", url: "tel:0-269-64338", descriere: "Poliție locală" }
     ]
   }
 ];
@@ -902,11 +1040,10 @@ export const USEFUL_LINKS = [
 // ═══════════════════════════════════════════════════════════════════════════════
 
 export const MOCK_LOGS: AdminLog[] = [
-  { id: 1, user: "Irina", action: "login_success", details: "Autentificare cu succes", timestamp: "2024-12-11 08:30:00", ip: "192.168.1.5" },
-  { id: 2, user: "Irina", action: "create_anunt", details: "Publicat anunț: Ședința CL 15.12.2024", timestamp: "2024-12-11 08:45:12", ip: "192.168.1.5" },
-  { id: 3, user: "Irina", action: "create_decizie", details: "Publicat decizia nr. 24/2024", timestamp: "2024-12-10 14:20:00", ip: "192.168.1.5" },
-  { id: 4, user: "Admin", action: "backup_db", details: "Backup automat baza de date", timestamp: "2024-12-11 00:00:00", ip: "System" },
-  { id: 5, user: "Irina", action: "upload_photo", details: "Încărcat 5 fotografii eveniment", timestamp: "2024-12-09 10:15:00", ip: "192.168.1.5" }
+  { id: 1, user: "Admin", action: "login_success", details: "Autentificare cu succes", timestamp: "2024-12-11 08:30:00", ip: "192.168.1.5" },
+  { id: 2, user: "Admin", action: "create_anunt", details: "Publicat anunț: DancuFarm", timestamp: "2024-12-11 08:45:12", ip: "192.168.1.5" },
+  { id: 3, user: "Admin", action: "create_decizie", details: "Publicat decizia nr. 24/2024", timestamp: "2024-12-10 14:20:00", ip: "192.168.1.5" },
+  { id: 4, user: "System", action: "backup_db", details: "Backup automat baza de date", timestamp: "2024-12-11 00:00:00", ip: "System" }
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -915,15 +1052,43 @@ export const MOCK_LOGS: AdminLog[] = [
 
 export const OFFICIAL_SYMBOLS = {
   stema: {
-    aprobare: "14 decembrie 2023",
-    descriere: "Stema comunei include simboluri agricole (spice de grâu, soare) și elemente istorice (trandafirii familiei Rosetti, potcoava familiei Stroescu).",
-    culori: ["Albastru", "Aur", "Verde"],
-    semnificatie: "Moldova, prosperitate, natură"
+    aprobare: "Conform legislației în vigoare",
+    descriere: "Stema satului Dancu reflectă istoria, natura și tradițiile comunității.",
+    culori: ["Verde (pădure)", "Albastru (Prutul)", "Auriu (câmpuri)"],
+    semnificatie: "Tradiție, natură, prosperitate"
   },
   drapel: {
-    aprobare: "14 decembrie 2023",
-    descriere: "Drapelul comunei reflectă culorile și simbolurile stemei.",
-    culori: ["Albastru", "Aur", "Verde"]
+    aprobare: "Conform legislației în vigoare",
+    descriere: "Drapelul satului reflectă culorile și simbolurile stemei.",
+    culori: ["Verde", "Albastru", "Auriu"]
   },
-  motto: "Pociumbăuți - 313 ani istorie, o comunitate mândră care merge înainte"
+  motto: "Dancu - Poarta Moldovei către România | 441 de ani de istorie (1584-2025)"
+};
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//                         NUMERE UTILE DANCU
+// ═══════════════════════════════════════════════════════════════════════════════
+
+export const NUMERE_UTILE = {
+  institutii: {
+    primarie: "0-269-64236",
+    primarieSecretar: "0-269-64238",
+    contabilitate: "0-269-64448",
+    gimnaziu: "0-269-64389",
+    gimnaziuCancelarie: "0-269-64463",
+    gradinita: "0-269-64349",
+    punctMedical: "0-269-64403",
+    politieSector: "0-269-64338",
+    posta: "0-269-92671"
+  },
+  urgente: {
+    unicUrgenta: "112",
+    pompieri: "901",
+    politie: "902",
+    salvare: "903"
+  },
+  online: {
+    emailPrimarie: "danco@hincesti.md",
+    dancufarm: "natykrav.wixsite.com/dancufarm"
+  }
 };

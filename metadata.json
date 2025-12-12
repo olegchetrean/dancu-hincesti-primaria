@@ -1,5 +1,12 @@
 {
-  "name": "Primăria Pociumbăuți Digital Portal",
-  "description": "Website oficial al Primăriei comunei Pociumbăuți, raionul Rîșcani. Conform cu HG 728/2023.",
+  "name": "Primăria Dancu - Portal Digital",
+  "description": "Website oficial al Primăriei satului Dancu, raionul Hîncești. La 8 km de România, casă a DancuFarm - fabrica de cașcavaluri artizanale. 441 de ani de istorie (1584-2025). Conform cu HG 728/2023.",
+  "keywords": "Dancu, Hîncești, DancuFarm, cașcaval, Leușeni, frontieră, Moldova, primărie, rezervație silvică",
+  "author": "Primăria Satului Dancu",
+  "contact": {
+    "email": "danco@hincesti.md",
+    "phone": "0-269-64236",
+    "address": "MD-3424, Dancu, Raionul Hîncești, Republica Moldova"
+  },
   "requestFramePermissions": []
 }

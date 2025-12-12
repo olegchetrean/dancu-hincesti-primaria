@@ -15,7 +15,7 @@ export const Administration: React.FC<Props> = ({ highContrast }) => {
       <section className="relative h-[400px] overflow-hidden">
         <img
           src="https://picsum.photos/1920/600?random=admin"
-          alt="Administrația Pociumbăuți"
+          alt="Administrația Dancu"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 flex items-center justify-center">

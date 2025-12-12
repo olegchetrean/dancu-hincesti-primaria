@@ -40,7 +40,7 @@ export const Institutions: React.FC<Props> = ({ highContrast }) => {
       <section className="relative h-[400px] overflow-hidden">
         <img
           src="https://picsum.photos/1920/600?random=church"
-          alt="Instituții Pociumbăuți"
+          alt="Instituții Dancu"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 flex items-center justify-center">
@@ -195,7 +195,7 @@ export const Institutions: React.FC<Props> = ({ highContrast }) => {
             <div>
               <p className={`mb-4 leading-relaxed ${textClass}`}>
                 Ctitorită în anul 1815 de către Vasile Stroescu, biserica din piatră în stil moldovenesc-bizantin
-                reprezintă centrul spiritual al comunității Pociumbăuți de peste 200 de ani.
+                reprezintă centrul spiritual al comunității Dancu de peste 200 de ani.
               </p>
               <p className={`mb-4 leading-relaxed ${textClass}`}>
                 În perioada sovietică (1960-1989), biserica a fost închisă și folosită ca depozit.
@@ -258,7 +258,7 @@ export const Institutions: React.FC<Props> = ({ highContrast }) => {
                 Hramul Satului - 8 Noiembrie
               </h2>
               <p className="text-white/90 mb-6 leading-relaxed">
-                Cea mai importantă sărbătoare a comunității Pociumbăuți coincide cu Ziua Sfântului
+                Cea mai importantă sărbătoare a comunității Dancu coincide cu Ziua Sfântului
                 Arhanghel Mihail, patronul bisericii noastre. Întreaga comunitate se reunește pentru
                 liturghie specială, procesiune religioasă, masă comună în curtea bisericii și
                 petrecere cu muzică populară și dansuri tradiționale.
@@ -284,7 +284,7 @@ export const Institutions: React.FC<Props> = ({ highContrast }) => {
                 Festival "Nunta Moldovenească"
               </h2>
               <p className={`mb-4 leading-relaxed ${textClass}`}>
-                În fiecare august, Pociumbăuți găzduiește Festivalul "Nunta Moldovenească" - o
+                În fiecare august, Dancu găzduiește Festivalul "Nunta Moldovenească" - o
                 reconstituire autentică a nunților tradiționale moldovenești.
               </p>
               <ul className={`space-y-2 ${textClass}`}>

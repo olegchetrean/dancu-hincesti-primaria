@@ -13,7 +13,7 @@ export const Documents: React.FC<Props> = ({ highContrast }) => {
         </h1>
         <p className={`max-w-2xl mx-auto ${highContrast ? 'text-white' : 'text-gray-600'}`}>
           În conformitate cu Legea nr. 239/2008 privind transparența în procesul decizional, 
-          aici sunt publicate actele normative adoptate de Primărie și Consiliul Local Pociumbăuți.
+          aici sunt publicate actele normative adoptate de Primărie și Consiliul Local Dancu.
         </p>
       </div>
 

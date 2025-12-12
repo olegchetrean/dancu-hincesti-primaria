@@ -5,7 +5,9 @@
       "Bash(npm run build:*)",
       "Bash(npm install)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nTransformare completă: Pociumbăuți → Dancu (Hîncești)\n\nActualizări majore:\n- Toate referințele Pociumbăuți înlocuite cu Dancu\n- Raionul Rîșcani → Hîncești\n- Populație: 593 → 1,206 (recensământ 2014)\n- Telefon: 0-256-54151 → 0-269-64236\n- Email: pociumbauti@riscani.md → danco@hincesti.md\n\nConținut nou specific Dancu:\n- DancuFarm - fabrica de cașcavaluri artizanale (secțiune dedicată)\n- PTF Leușeni-Albița - 8 km de frontiera cu România\n- Rezervația Silvică Dancu - 131 ha protejați\n- Istoric din 1584 (denumire veche: Ușerești)\n- Coordonate: 46.7578°N, 28.2100°E\n\nFișiere modificate: 19\n- constants.ts: date complete Dancu\n- Home.tsx: hero nou, DancuFarm, PTF Leușeni\n- History.tsx: 441 ani de istorie\n- Geography.tsx: distanțe actualizate\n- Navigation.tsx: branding verde/Dancu\n- Toate paginile: referințe actualizate\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n)\")"
     ]
   }
 }

@@ -20,13 +20,13 @@ export const Economy: React.FC<Props> = ({ highContrast }) => {
       <section className="relative h-[400px] overflow-hidden">
         <img
           src="https://picsum.photos/1920/600?random=wheat"
-          alt="Câmpuri agricole Pociumbăuți"
+          alt="Câmpuri agricole Dancu"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Economie și Agricultură</h1>
-            <p className="text-xl opacity-90">Agricultura - backbone-ul economic al comunei Pociumbăuți</p>
+            <p className="text-xl opacity-90">DancuFarm și agricultura - motoarele economiei locale</p>
           </div>
         </div>
       </section>
@@ -238,7 +238,7 @@ export const Economy: React.FC<Props> = ({ highContrast }) => {
               )}
             </div>
             <p className={`text-sm mt-3 ${textClass}`}>
-              Aceste servicii sunt disponibile în Rîșcani (~15 km) sau Bălți (~45 km).
+              Aceste servicii sunt disponibile în Hîncești (~28 km) sau la PTF Leușeni (~8 km).
             </p>
           </div>
         </section>

@@ -60,20 +60,20 @@ const Footer = ({ highContrast, setView }: { highContrast: boolean, setView: (v:
           {/* Column 1: Identity */}
           <div className="space-y-4">
             <div className="flex items-start gap-3">
-              <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold ${highContrast ? 'bg-yellow-400 text-black' : 'bg-moldova-blue text-white'}`}>
-                P
+              <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold ${highContrast ? 'bg-yellow-400 text-black' : 'bg-green-600 text-white'}`}>
+                D
               </div>
               <div>
-                <h3 className="font-bold text-lg leading-tight">Primăria Comunei Pociumbăuți</h3>
-                <p className="text-xs opacity-70">Raionul Rîșcani, Republica Moldova</p>
+                <h3 className="font-bold text-lg leading-tight">Primăria Satului Dancu</h3>
+                <p className="text-xs opacity-70">Raionul Hîncești, Republica Moldova</p>
               </div>
             </div>
             <p className="text-sm opacity-80 leading-relaxed">
               Website oficial, conform cu HG 728/2023.
-              Transparență totală în administrația publică locală.
+              La 8 km de frontiera cu România - poarta Moldovei către UE.
             </p>
             <p className="text-sm italic opacity-70">
-              "313 ani de istorie, o comunitate mândră care merge înainte"
+              "441 de ani de istorie | Casă a DancuFarm - cașcavaluri artizanale"
             </p>
           </div>
 
@@ -175,7 +175,7 @@ const Footer = ({ highContrast, setView }: { highContrast: boolean, setView: (v:
       <div className={`py-4 text-center text-xs border-t ${highContrast ? 'bg-gray-900 border-gray-800 text-gray-400' : 'bg-black/20 border-white/10 text-white/60'}`}>
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
           <p>
-            &copy; {new Date().getFullYear()} Primăria Pociumbăuți. Toate drepturile rezervate.
+            &copy; {new Date().getFullYear()} Primăria Dancu. Toate drepturile rezervate.
           </p>
           <p className="flex items-center gap-1">
             Dezvoltat cu <Heart size={12} className="text-red-500" /> conform HG 728/2023

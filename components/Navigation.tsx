@@ -98,11 +98,11 @@ export const Navigation: React.FC<NavProps> = ({ currentView, setView, highContr
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1">
               <Phone size={12} />
-              +373 256 73421
+              0-269-64236
             </span>
             <span className="flex items-center gap-1">
               <MapPin size={12} />
-              MD-5632, Pociumbăuți, Raionul Rîșcani
+              MD-3424, Dancu, Raionul Hîncești
             </span>
           </div>
           <div className="flex items-center gap-4">
@@ -130,15 +130,15 @@ export const Navigation: React.FC<NavProps> = ({ currentView, setView, highContr
 
             {/* Logo / Brand */}
             <div className="flex items-center gap-3">
-              <div className={`w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold ${highContrast ? 'bg-yellow-400 text-black' : 'bg-moldova-blue text-white'}`}>
-                P
+              <div className={`w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold ${highContrast ? 'bg-yellow-400 text-black' : 'bg-green-700 text-white'}`}>
+                D
               </div>
               <div className="hidden sm:block">
-                <span className={`font-bold text-lg ${highContrast ? 'text-yellow-400' : 'text-moldova-blue'}`}>
-                  Primăria Pociumbăuți
+                <span className={`font-bold text-lg ${highContrast ? 'text-yellow-400' : 'text-green-700'}`}>
+                  Primăria Dancu
                 </span>
                 <p className={`text-xs ${highContrast ? 'text-gray-400' : 'text-moldova-steel'}`}>
-                  Raionul Rîșcani
+                  Raionul Hîncești | La 8 km de România
                 </p>
               </div>
             </div>

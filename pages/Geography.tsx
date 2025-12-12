@@ -18,13 +18,13 @@ export const Geography: React.FC<Props> = ({ highContrast }) => {
       <section className="relative h-[400px] overflow-hidden">
         <img
           src="https://picsum.photos/1920/600?random=geography"
-          alt="Peisaj Pociumbăuți"
+          alt="Peisaj Dancu"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Geografie și Demografie</h1>
-            <p className="text-xl opacity-90">Descoperă comuna Pociumbăuți - 313 ani de istorie în nordul Moldovei</p>
+            <p className="text-xl opacity-90">Descoperă satul Dancu - 441 de ani de istorie în valea Prutului</p>
           </div>
         </div>
       </section>
@@ -67,7 +67,7 @@ export const Geography: React.FC<Props> = ({ highContrast }) => {
               </div>
               <div className={`mt-4 p-3 rounded-lg ${highContrast ? 'bg-gray-800' : 'bg-moldova-cloud'}`}>
                 <p className={`text-sm ${textClass}`}>
-                  Situat în nordul Republicii Moldova, la intersecția dintre câmpiile agricole și dealurile blânde ale regiunii.
+                  Situat în sud-vestul Republicii Moldova, în valea pitorească a Prutului, la doar 8 km de frontiera cu România.
                 </p>
               </div>
             </div>
@@ -80,16 +80,16 @@ export const Geography: React.FC<Props> = ({ highContrast }) => {
                   <strong>{CONTACT_INFO.distances?.chisinau}</strong>
                 </li>
                 <li className="flex justify-between">
-                  <span>Rîșcani (centru raional):</span>
+                  <span>Hîncești (centru raional):</span>
                   <strong>{CONTACT_INFO.distances?.riscani}</strong>
                 </li>
                 <li className="flex justify-between">
-                  <span>Bălți:</span>
-                  <strong>{CONTACT_INFO.distances?.balti}</strong>
+                  <span>PTF Leușeni-Albița:</span>
+                  <strong>8 km (10 min)</strong>
                 </li>
                 <li className="flex justify-between">
-                  <span>Frontiera Ucraina:</span>
-                  <strong>{CONTACT_INFO.distances?.frontieraUcraina}</strong>
+                  <span>Frontiera România:</span>
+                  <strong>8 km</strong>
                 </li>
               </ul>
             </div>

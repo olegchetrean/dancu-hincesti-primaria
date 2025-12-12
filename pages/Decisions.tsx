@@ -14,7 +14,7 @@ export const Decisions: React.FC<Props> = ({ highContrast }) => {
           Decizii și Dispoziții
         </h1>
         <p className={`max-w-2xl mx-auto text-lg ${highContrast ? 'text-white' : 'text-gray-600'}`}>
-          Registrul Actelor Locale. Documente oficiale adoptate de Consiliul Local și Primăria Pociumbăuți, 
+          Registrul Actelor Locale. Documente oficiale adoptate de Consiliul Local și Primăria Dancu, 
           disponibile publicului conform Legii nr. 239/2008.
         </p>
       </div>
